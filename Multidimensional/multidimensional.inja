@@ -1,0 +1,306 @@
+{% set margin = obj("top", 80, "right", 40, "bottom", 70, "left", 85) %}
+{% set width = 680 - margin.left - margin.right %}
+{% set height = 500 - margin.top - margin.bottom %}
+
+
+<svg style="width:100vw; height:100vh; display:block;"
+    xmlns:v="https://odviz.org/1.0/"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 {{ width + margin.left + margin.right }} {{ height + margin.top + margin.bottom }}"
+    >
+  
+   <style>
+    .title { font-family: Arial, sans-serif; font-size: 21px; font-weight: 700; }
+    .axis-label { font-family: Arial, sans-serif; font-size: 16px; fill: #000; }
+    .tick-label { font-family: Arial, sans-serif; font-size: 12px; fill: #222; }
+    .axis-line, .tick-line { stroke: #e5e5e5; }
+    .grid-line { stroke: #e5e5e5; }
+  </style>
+
+  <text class="title"
+        x="{{ (width + margin.left + margin.right) / 2 }}"
+        y="{{ margin.top - 20 }}"
+        text-anchor="middle">Dispersion por Tipo de medalla, edad, altura, genero y cantidad</text>
+
+  <g transform="translate({{ width + margin.left + 20 }}, {{ margin.top }})">
+
+  <rect x="0" y="0" width="100" height="170" fill="#d2d2d2" opacity="0.8"/>
+
+  <circle cx="10" cy="20" r="6" fill="#FFD700"/>
+  <text class="axis-label" x="25" y="25" font-size="12" fill="#000">Gold M</text>
+
+  <circle cx="10" cy="45" r="6" fill="#637b88"/>
+  <text class="axis-label" x="25" y="50" font-size="12" fill="#000">Silver M</text>
+
+  <circle cx="10" cy="70" r="6" fill="#CD7F32"/>
+  <text class="axis-label" x="25" y="75" font-size="12" fill="#000">Bronze M</text>
+
+  <polygon points="10,89 4,101 16,101" fill="#FFD700"/>
+  <text class="axis-label" x="25" y="100" font-size="12" fill="#000">Gold F</text>
+
+  <polygon points="10,114 4,126 16,126" fill="#637b88"/>
+  <text class="axis-label" x="25" y="125" font-size="12" fill="#000">Silver F</text>
+
+  <polygon points="10,139 4,151 16,151" fill="#CD7F32"/>
+  <text class="axis-label" x="25" y="150" font-size="12" fill="#000">Bronze F</text>
+
+</g>
+
+  <g transform="translate({{margin.left}},{{margin.top}})">
+
+  
+
+    {# Add X axis #}
+    {% set x = scaleLinear() 
+          | domain(0, 70) 
+          | range(0, width) %}
+          
+    <g transform = "translate(0, {{height}} )">
+    {{ call(axisBottom(x) | tickCount(5))}}
+    </g>
+
+    {# Add Y axis #}
+    {% set y = scaleLinear() 
+           | domain(0, 200) 
+           | range(height, 0) | nice(2) %}
+    {{ call(axisLeft(y) | tickCount(7)) }}
+
+    {# Add X axis label #}
+    <text class="axis-label" text-anchor="middle"
+      x="{{ width / 2 }}"
+      y="{{ height + 45 }}">
+      Edad
+    </text>
+
+    {# Add Y axis label #}
+    <text class="axis-label"
+        x="-50"
+        y="{{ height / 2 }}"
+        text-anchor="middle"> Altura </text>
+
+    {# Escala de color, de acuerdo a la medalla #}
+    {% set color = scaleOrdinal() 
+          | domain(["Bronze", "Silver", "Gold" ]) 
+          | range(["#CD7F32", "#637b88", "#FFD700"]) %}
+    
+    <g>
+
+      {% set data_agg = data | selectattr("Medal", "equalto", "Gold") | selectattr("Sex", "equalto", "F") | rejectattr("Height", "none") | rejectattr("Age", "none") | rejectattr("Weight", "none") |  regroup("Age") %}
+      {% for m in data_agg %}
+          {% set edad = m.list | map("Age") | unique | first %}
+          {% set cantidad = m.list | map("Age") | length %}
+          {% set promAltura = m.list | map("Height") | sum / m.list | map("Height") | length %}
+
+          {% set cx = scale(x, edad) %}
+          {% set cy = scale(y, promAltura) %}
+          {% set r = cantidad / 25 %}
+          {% if r < 2 %}{% set r = 2 %}{% endif %}
+          {% if r > 12 %}{% set r = 12 %}{% endif %}
+
+          <polygon
+            id="sh-gf-{{ edad }}" href="#row-gf-{{ edad }}"
+            points="
+              {{ cx }},{{ cy - r }}
+              {{ cx - r }},{{ cy + r }}
+              {{ cx + r }},{{ cy + r }}
+            "
+            stroke="#000"
+            stroke-width="0.5"
+            fill="{{ scale(color, "Gold") }}"
+          />
+          
+      {% endfor %}
+
+      {% set data_agg = data | selectattr("Medal", "equalto", "Silver") | selectattr("Sex", "equalto", "F") | rejectattr("Height", "none") | rejectattr("Age", "none") | rejectattr("Weight", "none") |  regroup("Age") %}
+      {% for m in data_agg %}
+          {% set edad = m.list | map("Age") | unique | first %}
+          {% set cantidad = m.list | map("Age") | length %}
+          {% set promAltura = m.list | map("Height") | sum / m.list | map("Height") | length %}
+
+          {% set cx = scale(x, edad) %}
+          {% set cy = scale(y, promAltura) %}
+          {% set r = cantidad / 25 %}
+          {% if r < 2 %}{% set r = 2 %}{% endif %}
+          {% if r > 12 %}{% set r = 12 %}{% endif %}
+
+          <polygon
+            id="sh-sf-{{ edad }}" href="#row-sf-{{ edad }}"
+            points="
+              {{ cx }},{{ cy - r }}
+              {{ cx - r }},{{ cy + r }}
+              {{ cx + r }},{{ cy + r }}
+            "
+            stroke="#000"
+            stroke-width="0.5"
+            fill="{{ scale(color, "Silver") }}"
+          />
+          
+      {% endfor %}
+
+      {% set data_agg = data | selectattr("Medal", "equalto", "Bronze") | selectattr("Sex", "equalto", "F") | rejectattr("Height", "none") | rejectattr("Age", "none") | rejectattr("Weight", "none") |  regroup("Age") %}
+      {% for m in data_agg %}
+          {% set edad = m.list | map("Age") | unique | first %}
+          {% set cantidad = m.list | map("Age") | length %}
+          {% set promAltura = m.list | map("Height") | sum / m.list | map("Height") | length %}
+
+          {% set cx = scale(x, edad) %}
+          {% set cy = scale(y, promAltura) %}
+          {% set r = cantidad / 25 %}
+          {% if r < 2 %}{% set r = 2 %}{% endif %}
+          {% if r > 12 %}{% set r = 12 %}{% endif %}
+
+          <polygon
+            id="sh-bf-{{ edad }}" href="#row-bf-{{ edad }}"
+            points="
+              {{ cx }},{{ cy - r }}
+              {{ cx - r }},{{ cy + r }}
+              {{ cx + r }},{{ cy + r }}
+            "
+            stroke="#000"
+            stroke-width="0.5"
+            fill="{{ scale(color, "Bronze") }}"
+          />
+          
+      {% endfor %}
+
+      {% set data_agg = data | selectattr("Medal", "equalto", "Gold") | selectattr("Sex", "equalto", "M") | rejectattr("Height", "none") | rejectattr("Age", "none") | rejectattr("Weight", "none") |  regroup("Age") %}
+      {% for m in data_agg %}
+          {% set edad = m.list | map("Age") | unique | first %}
+          {% set cantidad = m.list | map("Age") | length %}
+          {% set promAltura = m.list | map("Height") | sum / m.list | map("Height") | length %}
+
+          {% set cx = scale(x, edad) %}
+          {% set cy = scale(y, promAltura) %}
+          {% set r = cantidad / 25 %}
+          {% if r < 2 %}{% set r = 2 %}{% endif %}
+          {% if r > 12 %}{% set r = 12 %}{% endif %}
+
+          <circle
+          id="sh-gm-{{ edad }}" href="#row-gm-{{ edad }}"
+          cx="{{ cx }}"
+          cy="{{ cy }}"
+          r="{{ r }}"
+          stroke="#000"
+          stroke-width="0.5"
+          fill="{{ scale(color, "Gold") }}"/>
+          
+      {% endfor %}
+
+      {% set data_agg = data | selectattr("Medal", "equalto", "Silver") | selectattr("Sex", "equalto", "M") | rejectattr("Height", "none") | rejectattr("Age", "none") | rejectattr("Weight", "none") |  regroup("Age") %}
+      {% for m in data_agg %}
+          {% set edad = m.list | map("Age") | unique | first %}
+          {% set cantidad = m.list | map("Age") | length %}
+          {% set promAltura = m.list | map("Height") | sum / m.list | map("Height") | length %}
+
+          {% set cx = scale(x, edad) %}
+          {% set cy = scale(y, promAltura) %}
+          {% set r = cantidad / 25 %}
+          {% if r < 2 %}{% set r = 2 %}{% endif %}
+          {% if r > 12 %}{% set r = 12 %}{% endif %}
+
+          <circle
+          id="sh-sm-{{ edad }}" href="#row-sm-{{ edad }}"
+          cx="{{ cx }}"
+          cy="{{ cy }}"
+          r="{{ r }}"
+          stroke="#000"
+          stroke-width="0.5"
+          fill="{{ scale(color, "Silver") }}"/>
+          
+      {% endfor %}
+
+      {% set data_agg = data | selectattr("Medal", "equalto", "Bronze") | selectattr("Sex", "equalto", "M") | rejectattr("Height", "none") | rejectattr("Age", "none") | rejectattr("Weight", "none") |  regroup("Age") %}
+      {% for m in data_agg %}
+          {% set edad = m.list | map("Age") | unique | first %}
+          {% set cantidad = m.list | map("Age") | length %}
+          {% set promAltura = m.list | map("Height") | sum / m.list | map("Height") | length %}
+
+          {% set cx = scale(x, edad) %}
+          {% set cy = scale(y, promAltura) %}
+          {% set r = cantidad / 25 %}
+          {% if r < 2 %}{% set r = 2 %}{% endif %}
+          {% if r > 12 %}{% set r = 12 %}{% endif %}
+
+          <circle
+          id="sh-bm-{{ edad }}" href="#row-bm-{{ edad }}"
+          cx="{{ cx }}"
+          cy="{{ cy }}"
+          r="{{ r }}"
+          stroke="#000"
+          stroke-width="0.5"
+          fill="{{ scale(color, "Bronze") }}"/>
+          
+      {% endfor %}
+
+    </g>
+  </g>
+    
+    <v:table name="dispersion_atletas" columns="edad,prom_altura,cantidad,medalla,sexo" visualization="chart">
+
+        {# Mujeres - Oro #}
+        {% set data_agg = data | selectattr("Medal", "equalto", "Gold") | selectattr("Sex", "equalto", "F") | rejectattr("Height", "none") | rejectattr("Age", "none") | rejectattr("Weight", "none") |  regroup("Age") %}
+        {% for m in data_agg %}
+            {% set edad = m.list | map("Age") | unique | first %}
+            {% set cantidad = m.list | map("Age") | length %}
+            {% set promAltura = m.list | map("Height") | sum / m.list | map("Height") | length %}
+            <v:row id="row-gf-{{ edad }}" hrefs="sh-gf-{{ edad }}">{{ edad }},{{ promAltura | round(2) }},{{ cantidad }},Gold,F</v:row>
+            
+        {% endfor %}
+
+        {# Mujeres - Plata #}
+        {% set data_agg = data | selectattr("Medal", "equalto", "Silver") | selectattr("Sex", "equalto", "F") | rejectattr("Height", "none") | rejectattr("Age", "none") | rejectattr("Weight", "none") |  regroup("Age") %}
+        {% for m in data_agg %}
+            {% set edad = m.list | map("Age") | unique | first %}
+            {% set cantidad = m.list | map("Age") | length %}
+            {% set promAltura = m.list | map("Height") | sum / m.list | map("Height") | length %}
+
+            <v:row id="row-sf-{{ edad }}" hrefs="sh-sf-{{ edad }}">{{ edad }},{{ promAltura | round(2) }},{{ cantidad }},Silver,F</v:row>
+            
+        {% endfor %}
+
+        {# Mujeres - Bronce #}
+        {% set data_agg = data | selectattr("Medal", "equalto", "Bronze") | selectattr("Sex", "equalto", "F") | rejectattr("Height", "none") | rejectattr("Age", "none") | rejectattr("Weight", "none") |  regroup("Age") %}
+        {% for m in data_agg %}
+            {% set edad = m.list | map("Age") | unique | first %}
+            {% set cantidad = m.list | map("Age") | length %}
+            {% set promAltura = m.list | map("Height") | sum / m.list | map("Height") | length %}
+
+            <v:row id="row-bf-{{ edad }}" hrefs="sh-bf-{{ edad }}">{{ edad }},{{ promAltura | round(2) }},{{ cantidad }},Bronze,F</v:row>
+            
+        {% endfor %}
+
+        {# Hombres - Oro #}
+        {% set data_agg = data | selectattr("Medal", "equalto", "Gold") | selectattr("Sex", "equalto", "M") | rejectattr("Height", "none") | rejectattr("Age", "none") | rejectattr("Weight", "none") |  regroup("Age") %}
+        {% for m in data_agg %}
+            {% set edad = m.list | map("Age") | unique | first %}
+            {% set cantidad = m.list | map("Age") | length %}
+            {% set promAltura = m.list | map("Height") | sum / m.list | map("Height") | length %}
+
+            <v:row id="row-gm-{{ edad }}" hrefs="sh-gm-{{ edad }}">{{ edad }},{{ promAltura | round(2) }},{{ cantidad }},Gold,M</v:row>
+
+        {% endfor %}
+
+        {# Hombres - Plata #}
+        {% set data_agg = data | selectattr("Medal", "equalto", "Silver") | selectattr("Sex", "equalto", "M") | rejectattr("Height", "none") | rejectattr("Age", "none") | rejectattr("Weight", "none") |  regroup("Age") %}
+        {% for m in data_agg %}
+            {% set edad = m.list | map("Age") | unique | first %}
+            {% set cantidad = m.list | map("Age") | length %}
+            {% set promAltura = m.list | map("Height") | sum / m.list | map("Height") | length %}
+
+            <v:row id="row-sm-{{ edad }}" hrefs="sh-sm-{{ edad }}">{{ edad }},{{ promAltura | round(2) }},{{ cantidad }},Silver,M</v:row>
+            
+        {% endfor %}
+
+        {# Hombres - Bronce #}
+        {% set data_agg = data | selectattr("Medal", "equalto", "Bronze") | selectattr("Sex", "equalto", "M") | rejectattr("Height", "none") | rejectattr("Age", "none") | rejectattr("Weight", "none") |  regroup("Age") %}
+        {% for m in data_agg %}
+            {% set edad = m.list | map("Age") | unique | first %}
+            {% set cantidad = m.list | map("Age") | length %}
+            {% set promAltura = m.list | map("Height") | sum / m.list | map("Height") | length %}
+
+            <v:row id="row-bm-{{ edad }}" hrefs="sh-bm-{{ edad }}">{{ edad }},{{ promAltura | round(2) }},{{ cantidad }},Bronze,M</v:row>
+            
+        {% endfor %}
+    </v:table>
+
+</svg>
