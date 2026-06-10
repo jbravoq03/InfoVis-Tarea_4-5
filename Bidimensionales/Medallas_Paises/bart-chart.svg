@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:v="https://odviz.org/1.0/"
+     width="800" height="600" viewBox="0 0 800 600">
+  
+  <metadata>
+    
+    <!-- Single metadata table with all information -->
+    <v:table name="sales_data"
+             description="Sales by product 2024"
+             visualization="chart"
+             columns="id,product_name,value,color"
+             primaryKey="id">
+      
+      <v:row id="sale-0" hrefs="bar-0, label-0, value-0">
+        0,Product A,150,#2196F3
+      </v:row>
+      <v:row id="sale-1" hrefs="bar-1, label-1, value-1">
+        1,Product B,85,#4CAF50
+      </v:row>
+      <v:row id="sale-2" hrefs="bar-2, label-2, value-2">
+        2,Product C,234,#FF9800
+      </v:row>
+      
+    </v:table>
+    
+  </metadata>
+  
+  <!-- Visual shapes -->
+  <g transform="translate(50, 50)">
+    
+    <rect id="bar-0" href="#sale-0" x="50" y="120" width="80" height="150" fill="#2196F3"/>
+    <text id="label-0" href="#sale-0" x="90" y="290" text-anchor="middle">Product A</text>
+    <text id="value-0" href="#sale-0" x="90" y="115" text-anchor="middle">150</text>
+    
+    <rect id="bar-1" href="#sale-1" x="160" y="170" width="80" height="85" fill="#4CAF50"/>
+    <text id="label-1" href="#sale-1" x="200" y="290" text-anchor="middle">Product B</text>
+    <text id="value-1" href="#sale-1" x="200" y="165" text-anchor="middle">85</text>
+    
+    <rect id="bar-2" href="#sale-2" x="270" y="50" width="80" height="234" fill="#FF9800"/>
+    <text id="label-2" href="#sale-2" x="310" y="290" text-anchor="middle">Product C</text>
+    <text id="value-2" href="#sale-2" x="310" y="45" text-anchor="middle">234</text>
+    
+  </g>
+  
+</svg>

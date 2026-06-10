@@ -1,0 +1,98 @@
+{# Deportes con mayor participacion #}
+{% set margin = obj("top", 80, "right", 40, "bottom", 70, "left", 200) %}
+{% set width = 680 - margin.left - margin.right %}
+{% set height = 500 - margin.top - margin.bottom %}
+
+{# Formateo de datos #}
+{% set deporteCant = [] %}
+{% set data_agg = data | rejectattr("Sport", "none") | regroup("Sport") %}
+      {% for m in data_agg %}
+          {%set deporte = m.list | map("Sport") | unique | first %}
+          {%set particip = m.list | map("Sport") | length %}
+          {% set deporteCant = deporteCant | append(obj("deporte", deporte, "particip", particip)) %}
+      {% endfor %}
+{% set ordenado = deporteCant | sort_by("particip") %}
+{% set ordenado_desc = ordenado | slice((ordenado | length), 0, -1) %}
+{% set top15 = ordenado_desc | slice(0, 15, 1) %}
+{% set top15 = top15 | sort_by("particip") %}
+
+
+<svg style="width:100vw; height:100vh; display:block;"
+    xmlns:v="https://odviz.org/1.0/"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 {{ width + margin.left + margin.right }} {{ height + margin.top + margin.bottom }}">
+  
+   <style>
+    .title { font-family: Arial, sans-serif; font-size: 21px; font-weight: 700; }
+    .axis-label { font-family: Arial, sans-serif; font-size: 16px; fill: #000; }
+    .tick-label { font-family: Arial, sans-serif; font-size: 12px; fill: #222; }
+    .axis-line, .tick-line { stroke: #e5e5e5; }
+    .grid-line { stroke: #e5e5e5; }
+  </style>
+
+  <text class="title"
+        x="{{ (width + margin.left + margin.right) / 2 }}"
+        y="{{ margin.top - 20 }}"
+        text-anchor="middle">Top 10 Deportes con Mayor Participacion</text>
+
+  <g transform="translate({{margin.left}},{{margin.top}})">
+
+    {# Add X axis #}
+    {% set x = scaleLinear() 
+          | domain(0, 40000) 
+          | range(0, width) %}
+          
+    <g transform = "translate(0, {{height}} )">
+    {{ call(axisBottom(x) | tickCount(5))}}
+    </g>
+
+    {# Add Y axis #}
+    {% set y = scaleBand() 
+           | domain(top15 | map("deporte")) 
+           | range(height, 0) | nice(2) %}
+    {{ call(axisLeft(y) | tickCount(7)) }}
+
+
+    {# Add X axis label #}
+    <text class="axis-label" text-anchor="middle"
+      x="{{ width / 2 }}"
+      y="{{ height + 45 }}">
+      Cantidad de atletas
+    </text>
+
+    {# Add Y axis label #}
+    <text class="axis-label"
+        x="-155"
+        y="{{ height / 2 }}"
+        text-anchor="middle"> Deporte </text>
+    
+    <g>
+        {% for s in top15 %}
+            <rect 
+                id="sh-pa-{{ s.deporte }}" href="#row-pa-{{ s.deporte }}"
+                x="0"
+                y="{{ scale(y, s.deporte) - 6 }}"
+                width="{{ scale(x, s.particip) }}"
+                height="{{ 13 }}"
+                fill="#69b3a2"/>
+        {% endfor %}
+
+    </g>
+  </g>
+  <v:table name="deportes_participacion" columns="deporte,participacion" visualization="chart">
+      
+      {% for s in top15 %}
+
+          <v:row id="row-pa-{{ s.deporte }}" href="#sh-pa-{{ s.deporte }}">
+          
+          {{ s.deporte}},{{s.particip}}
+          
+          </v:row>
+          
+      {% endfor %}
+
+  </v:table>
+</svg>
+      
+
+

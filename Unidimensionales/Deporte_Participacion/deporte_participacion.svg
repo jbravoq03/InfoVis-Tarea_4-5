@@ -1,0 +1,368 @@
+
+
+
+<svg style="width:100vw; height:100vh; display:block;"
+    xmlns:v="https://odviz.org/1.0/"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 680 500">
+  
+   <style>
+    .title { font-family: Arial, sans-serif; font-size: 21px; font-weight: 700; }
+    .axis-label { font-family: Arial, sans-serif; font-size: 16px; fill: #000; }
+    .tick-label { font-family: Arial, sans-serif; font-size: 12px; fill: #222; }
+    .axis-line, .tick-line { stroke: #e5e5e5; }
+    .grid-line { stroke: #e5e5e5; }
+  </style>
+
+  <text class="title"
+        x="340.0"
+        y="60"
+        text-anchor="middle">Top 10 Deportes con Mayor Participacion</text>
+
+  <g transform="translate(200,80)">
+
+          
+    <g transform = "translate(0, 350 )">
+    <!-- axis orientation=bottom range=[0,440] ticks=9 -->
+  <g class="axis axis-bottom" transform="translate(0, 0)">
+    <line class="axis-line" x1="0" y1="0" x2="440" y2="0" stroke="currentColor" stroke-width="1"/>
+    <g class="tick" transform="translate(0, 0)">
+      <line class="tick-line" x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="0" y="9" text-anchor="middle" dominant-baseline="hanging" dy="0.15em" >0</text>
+    </g>
+    <g class="tick" transform="translate(55, 0)">
+      <line class="tick-line" x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="0" y="9" text-anchor="middle" dominant-baseline="hanging" dy="0.15em" >5000</text>
+    </g>
+    <g class="tick" transform="translate(110, 0)">
+      <line class="tick-line" x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="0" y="9" text-anchor="middle" dominant-baseline="hanging" dy="0.15em" >10000</text>
+    </g>
+    <g class="tick" transform="translate(165, 0)">
+      <line class="tick-line" x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="0" y="9" text-anchor="middle" dominant-baseline="hanging" dy="0.15em" >15000</text>
+    </g>
+    <g class="tick" transform="translate(220, 0)">
+      <line class="tick-line" x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="0" y="9" text-anchor="middle" dominant-baseline="hanging" dy="0.15em" >20000</text>
+    </g>
+    <g class="tick" transform="translate(275, 0)">
+      <line class="tick-line" x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="0" y="9" text-anchor="middle" dominant-baseline="hanging" dy="0.15em" >25000</text>
+    </g>
+    <g class="tick" transform="translate(330, 0)">
+      <line class="tick-line" x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="0" y="9" text-anchor="middle" dominant-baseline="hanging" dy="0.15em" >30000</text>
+    </g>
+    <g class="tick" transform="translate(385, 0)">
+      <line class="tick-line" x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="0" y="9" text-anchor="middle" dominant-baseline="hanging" dy="0.15em" >35000</text>
+    </g>
+    <g class="tick" transform="translate(440, 0)">
+      <line class="tick-line" x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="0" y="9" text-anchor="middle" dominant-baseline="hanging" dy="0.15em" >40000</text>
+    </g>
+  </g>
+
+    </g>
+
+    <!-- axis orientation=left range=[350,0] ticks=15 -->
+  <g class="axis axis-left" transform="translate(0, 0)">
+    <line class="axis-line" x1="0" y1="350" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+    <g class="tick" transform="translate(0, 350)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >Boxing</text>
+    </g>
+    <g class="tick" transform="translate(0, 326.67)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >Canoeing</text>
+    </g>
+    <g class="tick" transform="translate(0, 303.33)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >Equestrianism</text>
+    </g>
+    <g class="tick" transform="translate(0, 280)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >Sailing</text>
+    </g>
+    <g class="tick" transform="translate(0, 256.67)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >Football</text>
+    </g>
+    <g class="tick" transform="translate(0, 233.33)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >Wrestling</text>
+    </g>
+    <g class="tick" transform="translate(0, 210)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >Alpine Skiing</text>
+    </g>
+    <g class="tick" transform="translate(0, 186.67)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >Cross Country Skiing</text>
+    </g>
+    <g class="tick" transform="translate(0, 163.33)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >Rowing</text>
+    </g>
+    <g class="tick" transform="translate(0, 140)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >Fencing</text>
+    </g>
+    <g class="tick" transform="translate(0, 116.67)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >Cycling</text>
+    </g>
+    <g class="tick" transform="translate(0, 93.33)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >Shooting</text>
+    </g>
+    <g class="tick" transform="translate(0, 70)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >Swimming</text>
+    </g>
+    <g class="tick" transform="translate(0, 46.67)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >Gymnastics</text>
+    </g>
+    <g class="tick" transform="translate(0, 23.33)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >Athletics</text>
+    </g>
+  </g>
+
+
+
+    <text class="axis-label" text-anchor="middle"
+      x="220.0"
+      y="395">
+      Cantidad de atletas
+    </text>
+
+    <text class="axis-label"
+        x="-155"
+        y="175.0"
+        text-anchor="middle"> Deporte </text>
+    
+    <g>
+            <rect 
+                id="sh-pa-Boxing" href="#row-pa-Boxing"
+                x="0"
+                y="344.0"
+                width="66.517"
+                height="13"
+                fill="#69b3a2"/>
+            <rect 
+                id="sh-pa-Canoeing" href="#row-pa-Canoeing"
+                x="0"
+                y="320.6666666666667"
+                width="67.881"
+                height="13"
+                fill="#69b3a2"/>
+            <rect 
+                id="sh-pa-Equestrianism" href="#row-pa-Equestrianism"
+                x="0"
+                y="297.3333333333333"
+                width="69.78399999999999"
+                height="13"
+                fill="#69b3a2"/>
+            <rect 
+                id="sh-pa-Sailing" href="#row-pa-Sailing"
+                x="0"
+                y="274.0"
+                width="72.446"
+                height="13"
+                fill="#69b3a2"/>
+            <rect 
+                id="sh-pa-Football" href="#row-pa-Football"
+                x="0"
+                y="250.66666666666669"
+                width="74.195"
+                height="13"
+                fill="#69b3a2"/>
+            <rect 
+                id="sh-pa-Wrestling" href="#row-pa-Wrestling"
+                x="0"
+                y="227.33333333333334"
+                width="78.694"
+                height="13"
+                fill="#69b3a2"/>
+            <rect 
+                id="sh-pa-Alpine Skiing" href="#row-pa-Alpine Skiing"
+                x="0"
+                y="204.0"
+                width="97.119"
+                height="13"
+                fill="#69b3a2"/>
+            <rect 
+                id="sh-pa-Cross Country Skiing" href="#row-pa-Cross Country Skiing"
+                x="0"
+                y="180.66666666666669"
+                width="100.463"
+                height="13"
+                fill="#69b3a2"/>
+            <rect 
+                id="sh-pa-Rowing" href="#row-pa-Rowing"
+                x="0"
+                y="157.33333333333334"
+                width="116.54500000000002"
+                height="13"
+                fill="#69b3a2"/>
+            <rect 
+                id="sh-pa-Fencing" href="#row-pa-Fencing"
+                x="0"
+                y="134.0"
+                width="118.085"
+                height="13"
+                fill="#69b3a2"/>
+            <rect 
+                id="sh-pa-Cycling" href="#row-pa-Cycling"
+                x="0"
+                y="110.66666666666669"
+                width="119.44900000000001"
+                height="13"
+                fill="#69b3a2"/>
+            <rect 
+                id="sh-pa-Shooting" href="#row-pa-Shooting"
+                x="0"
+                y="87.33333333333337"
+                width="125.928"
+                height="13"
+                fill="#69b3a2"/>
+            <rect 
+                id="sh-pa-Swimming" href="#row-pa-Swimming"
+                x="0"
+                y="64.0"
+                width="255.145"
+                height="13"
+                fill="#69b3a2"/>
+            <rect 
+                id="sh-pa-Gymnastics" href="#row-pa-Gymnastics"
+                x="0"
+                y="40.666666666666686"
+                width="293.777"
+                height="13"
+                fill="#69b3a2"/>
+            <rect 
+                id="sh-pa-Athletics" href="#row-pa-Athletics"
+                x="0"
+                y="17.33333333333337"
+                width="424.86400000000003"
+                height="13"
+                fill="#69b3a2"/>
+
+    </g>
+  </g>
+  <v:table name="deportes_participacion" columns="deporte,participacion" visualization="chart">
+      
+
+          <v:row id="row-pa-Boxing" href="#sh-pa-Boxing">
+          
+          Boxing,6047
+          
+          </v:row>
+          
+
+          <v:row id="row-pa-Canoeing" href="#sh-pa-Canoeing">
+          
+          Canoeing,6171
+          
+          </v:row>
+          
+
+          <v:row id="row-pa-Equestrianism" href="#sh-pa-Equestrianism">
+          
+          Equestrianism,6344
+          
+          </v:row>
+          
+
+          <v:row id="row-pa-Sailing" href="#sh-pa-Sailing">
+          
+          Sailing,6586
+          
+          </v:row>
+          
+
+          <v:row id="row-pa-Football" href="#sh-pa-Football">
+          
+          Football,6745
+          
+          </v:row>
+          
+
+          <v:row id="row-pa-Wrestling" href="#sh-pa-Wrestling">
+          
+          Wrestling,7154
+          
+          </v:row>
+          
+
+          <v:row id="row-pa-Alpine Skiing" href="#sh-pa-Alpine Skiing">
+          
+          Alpine Skiing,8829
+          
+          </v:row>
+          
+
+          <v:row id="row-pa-Cross Country Skiing" href="#sh-pa-Cross Country Skiing">
+          
+          Cross Country Skiing,9133
+          
+          </v:row>
+          
+
+          <v:row id="row-pa-Rowing" href="#sh-pa-Rowing">
+          
+          Rowing,10595
+          
+          </v:row>
+          
+
+          <v:row id="row-pa-Fencing" href="#sh-pa-Fencing">
+          
+          Fencing,10735
+          
+          </v:row>
+          
+
+          <v:row id="row-pa-Cycling" href="#sh-pa-Cycling">
+          
+          Cycling,10859
+          
+          </v:row>
+          
+
+          <v:row id="row-pa-Shooting" href="#sh-pa-Shooting">
+          
+          Shooting,11448
+          
+          </v:row>
+          
+
+          <v:row id="row-pa-Swimming" href="#sh-pa-Swimming">
+          
+          Swimming,23195
+          
+          </v:row>
+          
+
+          <v:row id="row-pa-Gymnastics" href="#sh-pa-Gymnastics">
+          
+          Gymnastics,26707
+          
+          </v:row>
+          
+
+          <v:row id="row-pa-Athletics" href="#sh-pa-Athletics">
+          
+          Athletics,38624
+          
+          </v:row>
+          
+
+  </v:table>
+</svg>
+      
+
+
