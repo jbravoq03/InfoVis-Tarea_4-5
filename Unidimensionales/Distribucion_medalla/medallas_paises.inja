@@ -1,28 +1,16 @@
-{# Paises con más medallas #}
-{% set margin = obj("top", 80, "right", 40, "bottom", 70, "left", 120) %}
+{# Distribucion de tipos de medalla desde data.json #}
+
+{% set margin = obj("top", 55, "right", 40, "bottom", 70, "left", 85) %}
 {% set width = 680 - margin.left - margin.right %}
 {% set height = 500 - margin.top - margin.bottom %}
 
-{# Formateo de datos #}
-{% set paisesCant = [] %}
-{% set data_agg = data | rejectattr("NOC", "none") | rejectattr("Medal", "none") | regroup("NOC") %}
-      {% for m in data_agg %}
-          {%set pais = m.list | map("NOC") | unique | first %}
-          {%set medallas = m.list | map("NOC") | length %}
-          {% set paisesCant = paisesCant | append(obj("pais", pais, "medallas", medallas)) %}
-      {% endfor %}
-{% set ordenado = paisesCant | sort_by("medallas") %}
-{% set ordenado_desc = ordenado | slice((ordenado | length), 0, -1) %}
-{% set top30 = ordenado_desc | slice(0, 30, 1) %}
-{% set top30 = top30 | sort_by("medallas") %}
 
-<svg style="width:100vw; height:100vh; display:block;"
-     xmlns:v="https://odviz.org/1.0/"
+<svg width="{{ width + margin.left + margin.right }}"
+     height="{{ height + margin.top + margin.bottom }}"
      xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 {{ width + margin.left + margin.right }} {{ height + margin.top + margin.bottom }}"
-     >
-  
-   <style>
+     xmlns:v="https://odviz.org/1.0/">
+
+  <style>
     .title { font-family: Arial, sans-serif; font-size: 21px; font-weight: 700; }
     .axis-label { font-family: Arial, sans-serif; font-size: 16px; fill: #000; }
     .tick-label { font-family: Arial, sans-serif; font-size: 12px; fill: #222; }
@@ -32,93 +20,62 @@
 
   <text class="title"
         x="{{ (width + margin.left + margin.right) / 2 }}"
-        y="{{ margin.top - 20 }}"
-        text-anchor="middle">Top 30 Paises con Mas Medallas</text>
+        y="26"
+        text-anchor="middle">Distribución de tipos de medalla</text>
 
-  <g transform="translate({{margin.left}},{{margin.top}})">
+  <g transform="translate({{ margin.left }},{{ margin.top }})">
 
-    {# Add X axis #}
-    {% set x = scaleLinear() 
-          | domain(0, 6000) 
-          | range(0, width) %}
-          
-    <g transform = "translate(0, {{height}} )">
-    {{ call(axisBottom(x) | tickCount(5))}}
+    {% set medalTypes = ["Gold", "Silver", "Bronze"] %}
+    {% set medalGroups = data | regroup("Medal") %}
+    {% set y = scaleLinear()
+          | domain([0, 15000])
+          | range(height, 0) %}
+    {% set x = scaleBand()
+          | range(0, width)
+          | domain(medalTypes)
+          | padding(0.4) %}
+
+    <g transform="translate(0,{{ height }})">
+      {{ call(axisBottom(x) | tickValues(medalTypes)) }}
     </g>
 
-    {# Add Y axis #}
-    {% set y = scaleBand() 
-           | domain(top30 | map("pais")) 
-           | range(height, 0) | nice(2) %}
-    {{ call(axisLeft(y) | tickCount(7)) }}
-
-
-    {# Add X axis label #}
-    <text class="axis-label" text-anchor="middle"
-      x="{{ width / 2 }}"
-      y="{{ height + 45 }}">
-      Cantidad de Medallas
-    </text>
-
-    {# Add Y axis label #}
-    <text class="axis-label"
-        x="-75"
-        y="{{ height / 2 }}"
-        text-anchor="middle"> Pais </text>
-    
     <g>
-        {% for s in top30 %}
-
-            {% set fill = "#ffd700" %}
-
-            {% if s.medallas < 4500 %}
-                {% set fill = "#f6c85f" %}
-            {% endif %}
-
-            {% if s.medallas < 3000 %}
-                {% set fill = "#a6d96a" %}
-            {% endif %}
-
-            {% if s.medallas < 2000 %}
-                {% set fill = "#66c2a5" %}
-            {% endif %}
-
-            {% if s.medallas < 1000 %}
-                {% set fill = "#2c7fb8" %}
-            {% endif %}
-            <line
-                x1="0"
-                x2="{{ scale(x, s.medallas) }}"
-                y1="{{ scale(y, s.pais) }}"
-                y2="{{ scale(y, s.pais) }}"
-                stroke="#ccc"
-            />
-
-            <circle
-                id="sh-co-{{ s.pais }}" href="#row-co-{{ s.pais }}"
-                cx="{{ scale(x, s.medallas) }}"
-                cy="{{ scale(y, s.pais) }}"
-                r="4"
-                fill="{{ fill }}"
-            />
-
-        {% endfor %}
-
+      {{ call(axisLeft(y) | tickValues([0, 5000, 10000, 15000]) | grid(true)) }}
     </g>
+
+    <text class="axis-label"
+          x="{{ width / 2 }}"
+          y="{{ height + 52 }}"
+          text-anchor="middle">Tipo de medalla</text>
+
+    <text class="axis-label"
+          x="-42"
+          y="{{ height / 2 }}"
+          text-anchor="middle">Cantidad</text>
+
+    {% for medal in medalTypes %}
+      {% for group in medalGroups %}
+        {% if group.grouper == medal %}
+          <rect id="sh-medalla-{{ medal }}" href="#row-medalla-{{ medal }}"
+                x="{{ scale(x, medal) }}"
+                y="{{ scale(y, group.list | length) }}"
+                width="{{ bandwidth(x) }}"
+                height="{{ height - scale(y, group.list | length) }}"
+                fill="#69b3a2"/>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
   </g>
-  <v:table name="medallas_paises" columns="pais,cantidad" visualization="chart">
+
+  <v:table name="distribucion_medallas" columns="medalla,cantidad" visualization="chart">
+
+
+      {% for medal in medalTypes %}
+        {% for group in medalGroups %}
+          {% if group.grouper == medal %}
+
+            <v:row id="row-medalla-{{ medal }}" href="#sh-medalla-{{ medal }}">
+
+            {{ medal }},{{ group.list | length }}
+
         
-        {% for s in top30 %}
-
-            <v:row id="row-co-{{ s.pais }}" href="#sh-co-{{ s.pais }}">
-            
-            {{ s.pais }},{{ s.medallas}}
-            
-            </v:row>
-            
-        {% endfor %}
-
-    </v:table>
-</svg>
-      
-

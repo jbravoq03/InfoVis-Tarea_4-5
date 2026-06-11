@@ -3,28 +3,42 @@
 {% set width = 760 - margin.left - margin.right %}
 {% set height = 500 - margin.top - margin.bottom %}
 
-{% set dataAgrupada = data | regroup("Age") %}
-{% set edades = map(dataAgrupada, "grouper") %}
-{% set maxIndex = (dataAgrupada | length) - 1 %}
-{% set totalAtletas = data | length %}
+{% set atletasConEdad = data | rejectattr("Age", "none") %}
+{% set dataAgrupada = atletasConEdad | regroup("Age") | sort_by("grouper") %}
+{% set totalAtletas = atletasConEdad | length %}
 
-{% set xScale = scaleLinear()| domain(0, maxIndex)| range(0, width) %}
-{% set yScale = scaleLinear() | domain(0, 0.1)| range(height, 0) %}
+{% set edad_densidad_atletas = [] %}
+{% set maxEdad = 0 %}
 
-{% set densityData = [] %}
-{% set index = 0 %}
 {% for ageGroup in dataAgrupada %}
   {% if isDefined(ageGroup.grouper) %}
     {% set densidad = (ageGroup.list | length) / totalAtletas %}
-    {% set densityData = densityData
-      | append(obj("x", scale(xScale, index), "y", scale(yScale, densidad), "y0", scale(yScale, 0) )) %}
-    {% set index = index + 1 %}
+    {% set edad_densidad_atletas = edad_densidad_atletas
+      | append(obj("edad", ageGroup.grouper, "densidad", densidad)) %}
+
+    {% if ageGroup.grouper > maxEdad %}
+      {% set maxEdad = ageGroup.grouper %}
+    {% endif %}
   {% endif %}
 {% endfor %}
 
-<svg width="{{ width + margin.left + margin.right }}"
-     height="{{ height + margin.top + margin.bottom }}"
-     xmlns="http://www.w3.org/2000/svg">
+{% if maxEdad == 0 %}
+  {% set maxEdad = 60 %}
+{% endif %}
+
+{% set xScale = scaleLinear() | domain(0, maxEdad) | range(0, width) %}
+{% set yScale = scaleLinear() | domain(0, 0.1) | range(height, 0) %}
+
+{% set densityData = [] %}
+{% for fila in edad_densidad_atletas %}
+  {% set densityData = densityData
+    | append(obj("edad", fila.edad, "densidad", fila.densidad, "x", scale(xScale, fila.edad), "y", scale(yScale, fila.densidad), "y0", scale(yScale, 0))) %}
+{% endfor %}
+
+<svg style="width:100vw; height:100vh; display:block;"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:v="https://odviz.org/1.0/"
+     viewBox="0 0 {{ width + margin.left + margin.right }} {{ height + margin.top + margin.bottom }}">
   <style>
     text { font-family: Arial, sans-serif; }
     .title { font-size: 20px; font-weight: 700; }
@@ -39,10 +53,14 @@
         y="30"
         text-anchor="middle">Densidad de la edad de los atletas</text>
 
-  <g transform="translate({{margin.left}},{{margin.top}})">
-    <g transform="translate(0, {{height}})"> {{ call(axisBottom(xScale) | tickValues([0, 10, 20, 30, 40, 50, 60])) }} </g>
+  <g transform="translate({{ margin.left }},{{ margin.top }})">
+    <g transform="translate(0, {{ height }})">
+      {{ call(axisBottom(xScale) | tickValues([0, 10, 20, 30, 40, 50, 60])) }}
+    </g>
 
-    <g> {{ call(axisLeft(yScale) | tickValues([0, 0.025, 0.05, 0.075]) | grid(true)) }} </g>
+    <g>
+      {{ call(axisLeft(yScale) | tickValues([0, 0.025, 0.05, 0.075, 0.1]) | grid(true)) }}
+    </g>
 
     <polygon fill="#64b3c5"
              opacity="0.82"
@@ -59,6 +77,15 @@
                         {{ punto.x }},{{ punto.y }}
                       {% endfor %}"/>
 
+    {% for punto in densityData %}
+      <circle
+          id="sh-edad-{{ punto.edad }}" href="#row-edad-{{ punto.edad }}"
+          cx="{{ punto.x }}"
+          cy="{{ punto.y }}"
+          r="2.5"
+          fill="#3e3e3e"/>
+    {% endfor %}
+
     <text class="axis-label"
           x="{{ width / 2 }}"
           y="{{ height + 45 }}"
@@ -69,4 +96,18 @@
           y="{{ height / 2 }}"
           text-anchor="middle">Densidad</text>
   </g>
+
+  <v:table name="edad_densidad_atletas" columns="edad,densidad" visualization="chart">
+
+      {% for punto in densityData %}
+
+          <v:row id="row-edad-{{ punto.edad }}" href="#sh-edad-{{ punto.edad }}">
+
+          {{ punto.edad }},{{ punto.densidad }}
+
+          </v:row>
+
+      {% endfor %}
+
+  </v:table>
 </svg>
