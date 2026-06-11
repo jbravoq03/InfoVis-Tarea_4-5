@@ -107,47 +107,9 @@
             padding: 2rem;
             margin-top: 3rem;
         }
-
-        #viewerBar {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: white;
-            box-shadow: var(--shadow);
-            padding: 1rem;
-        }
-
-        #viewerBar button {
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 0.75rem 1rem;
-            border-radius: 10px;
-            cursor: pointer;
-            font-weight: 600;
-        }
-
-        #viewerBar button:hover {
-            background: var(--primary-hover);
-        }
-
-        #viewerContainer {
-            width: 100%;
-            height: calc(100vh - 70px);
-        }
-
-        #viewerFrame {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
     </style>
 </head>
 <body>
-
-<div id="viewerBar" style="display:none;">
-    <button onclick="volverMenu()">← Volver a la página principal</button>
-</div>
 
 <header>
     <h1>Tarea 4-5 - Visualización de Información - Juegos Olímpicos</h1>
@@ -169,21 +131,9 @@
         <article class="card">
             <h2>Densidad de Edad</h2>
             <p>
-                Densidad
+                Muestra la distribución de la edad de los atletas mediante una curva de densidad, permitiendo identificar las edades más frecuentes dentro de la población analizada.
             </p>
-            <a href="#" class="btn"
-            onclick="abrirVisualizacion('./Unidimensionales/Densidad_Edad/index.html'); return false;">
-                Abrir visualización
-            </a>
-        </article>
-
-        <article class="card">
-            <h2>Deportes con mayor participación</h2>
-            <p>
-                Top
-            </p>
-            <a href="#" class="btn"
-            onclick="abrirVisualizacion('./Unidimensionales/Deporte_Participacion/index.html'); return false;">
+            <a href="./Unidimensionales/Densidad_Edad/index.html" class="btn">
                 Abrir visualización
             </a>
         </article>
@@ -191,24 +141,62 @@
         <article class="card">
             <h2>Distribución de Medallas</h2>
             <p>
-                Medallas
+                Muestra la frecuencia de cada tipo de medalla obtenida por los atletas, diferenciando entre oro, plata y bronce.
             </p>
-            <a href="#" class="btn"
-            onclick="abrirVisualizacion('./Unidimensionales/Distribucion_medalla/index.html'); return false;">
+            <a href="./Unidimensionales/Distribucion_medalla/index.html" class="btn">
+                Abrir visualización
+            </a>
+        </article>
+
+        <article class="card">
+            <h2>Deportes con mayor participación</h2>
+            <p>
+                Muestra los deportes con mayor participación, mostrando la cantidad de atletas que han competido en cada disciplina.
+            </p>
+            <a href="./Unidimensionales/Deporte_Participacion/index.html" class="btn">
                 Abrir visualización
             </a>
         </article>
 
         <!-- Bidimensionales -->
 
+        <article class="card">
+            <h2>Medallas por Países</h2>
+            <p>
+                Muestra los países con mayor cantidad de medallas mediante un gráfico de puntos de Cleveland, facilitando la comparación entre ellos.
+            </p>
+            <a href="./Bidimensionales/Medallas_Paises/index.html" class="btn">
+                Abrir visualización
+            </a>
+        </article>
+
+        <article class="card">
+            <h2>Participación por Género</h2>
+            <p>
+                Muestra la evolución de la proporción de participación por género a lo largo del tiempo, permitiendo observar cambios en la representación de hombres y mujeres.
+            </p>
+            <a href="./Bidimensionales/Participacion_Genero/index.html" class="btn">
+                Abrir visualización
+            </a>
+        </article>
+
+        <!-- Multidimensional -->
+
+        <article class="card">
+            <h2>Cantidad de Medallas por Género, Edad, Altura, Tipo de Medalla</h2>
+            <p>
+                Muestra una relación agregada entre la edad, la altura promedio, el tipo de medalla y el género de los atletas, utilizando el tamaño de los puntos para representar la cantidad de observaciones en cada grupo.
+            </p>
+            <a href="./Multidimensional/index.html" class="btn">
+                Abrir visualización
+            </a>
+        </article>
+
         
 
     </div>
 
 </main>
-<div id="viewerContainer" style="display:none;">
-    <iframe id="viewerFrame"></iframe>
-</div>
 
 <footer>
     <p>
@@ -217,29 +205,4 @@
 </footer>
 
 </body>
-
-<script>
-    function abrirVisualizacion(url) {
-        document.querySelector("main").style.display = "none";
-        document.querySelector("header").style.display = "none";
-        document.querySelector("footer").style.display = "none";
-
-        document.getElementById("viewerBar").style.display = "block";
-        document.getElementById("viewerContainer").style.display = "block";
-
-        document.getElementById("viewerFrame").src = url;
-    }
-
-    function volverMenu() {
-        document.getElementById("viewerFrame").src = "";
-
-        document.getElementById("viewerBar").style.display = "none";
-        document.getElementById("viewerContainer").style.display = "none";
-
-        document.querySelector("main").style.display = "block";
-        document.querySelector("header").style.display = "block";
-        document.querySelector("footer").style.display = "block";
-    }
-</script>
-
 </html>

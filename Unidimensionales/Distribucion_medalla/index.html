@@ -4,6 +4,37 @@
   <meta charset="UTF-8">
   <title>Open Data Visualization Example</title>
   <style>
+
+    :root {
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+    }
+
+    .back-btn {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+
+      text-decoration: none;
+      background: var(--primary);
+      color: white;
+
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-weight: 600;
+
+      transition: background .2s ease;
+
+      z-index: 9999;
+    }
+
+    .back-btn:hover {
+      background: var(--primary-hover);
+    }
+    
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body { overflow: hidden; height: 100vh; }
@@ -44,6 +75,9 @@
   <script src="simple-table.js"></script>
 </head>
 <body>
+  <a href="../../index.html" class="back-btn">
+    Volver a la página principal
+  </a>
   <div id="split">
     <div id="svg-panel">
       <object id="svg-object" type="image/svg+xml" data="medallas_paises.svg"></object>
