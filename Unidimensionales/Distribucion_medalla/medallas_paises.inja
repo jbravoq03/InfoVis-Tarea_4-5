@@ -78,4 +78,11 @@
 
             {{ medal }},{{ group.list | length }}
 
-        
+            </v:row>
+  
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+
+  </v:table>
+</svg>
