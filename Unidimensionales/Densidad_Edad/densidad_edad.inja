@@ -1,0 +1,72 @@
+
+{% set margin = obj("top", 55, "right", 35, "bottom", 65, "left", 200) %}
+{% set width = 760 - margin.left - margin.right %}
+{% set height = 500 - margin.top - margin.bottom %}
+
+{% set dataAgrupada = data | regroup("Age") %}
+{% set edades = map(dataAgrupada, "grouper") %}
+{% set maxIndex = (dataAgrupada | length) - 1 %}
+{% set totalAtletas = data | length %}
+
+{% set xScale = scaleLinear()| domain(0, maxIndex)| range(0, width) %}
+{% set yScale = scaleLinear() | domain(0, 0.1)| range(height, 0) %}
+
+{% set densityData = [] %}
+{% set index = 0 %}
+{% for ageGroup in dataAgrupada %}
+  {% if isDefined(ageGroup.grouper) %}
+    {% set densidad = (ageGroup.list | length) / totalAtletas %}
+    {% set densityData = densityData
+      | append(obj("x", scale(xScale, index), "y", scale(yScale, densidad), "y0", scale(yScale, 0) )) %}
+    {% set index = index + 1 %}
+  {% endif %}
+{% endfor %}
+
+<svg width="{{ width + margin.left + margin.right }}"
+     height="{{ height + margin.top + margin.bottom }}"
+     xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text { font-family: Arial, sans-serif; }
+    .title { font-size: 20px; font-weight: 700; }
+    .axis-label { font-size: 16px; }
+    .tick-label { font-size: 12px; fill: #333; }
+    .axis-line, .tick-line { stroke: #dddddd; }
+    .grid-line { stroke: #e7e7e7; stroke-dasharray: none; }
+  </style>
+
+  <text class="title"
+        x="{{ (width + margin.left + margin.right) / 2 }}"
+        y="30"
+        text-anchor="middle">Densidad de la edad de los atletas</text>
+
+  <g transform="translate({{margin.left}},{{margin.top}})">
+    <g transform="translate(0, {{height}})"> {{ call(axisBottom(xScale) | tickValues([0, 10, 20, 30, 40, 50, 60])) }} </g>
+
+    <g> {{ call(axisLeft(yScale) | tickValues([0, 0.025, 0.05, 0.075]) | grid(true)) }} </g>
+
+    <polygon fill="#64b3c5"
+             opacity="0.82"
+             points="0,{{ scale(yScale, 0) }}
+                     {% for punto in densityData %}
+                       {{ punto.x }},{{ punto.y }}
+                     {% endfor %}
+                     {{ width }},{{ scale(yScale, 0) }}"/>
+
+    <polyline stroke="#3e3e3e"
+              stroke-width="3"
+              fill="none"
+              points="{% for punto in densityData %}
+                        {{ punto.x }},{{ punto.y }}
+                      {% endfor %}"/>
+
+    <text class="axis-label"
+          x="{{ width / 2 }}"
+          y="{{ height + 45 }}"
+          text-anchor="middle">Edad</text>
+
+    <text class="axis-label"
+          x="-75"
+          y="{{ height / 2 }}"
+          text-anchor="middle">Densidad</text>
+  </g>
+</svg>

@@ -1,0 +1,1306 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<svg style="width:100vw; height:100vh; display:block;"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:v="https://odviz.org/1.0/"
+     viewBox="0 0 760 500">
+  <style>
+    text { font-family: Arial, sans-serif; }
+    .title { font-size: 20px; font-weight: 700; }
+    .axis-label { font-size: 16px; }
+    .tick-label { font-size: 12px; fill: #333; }
+    .axis-line, .tick-line { stroke: #dddddd; }
+    .grid-line { stroke: #e7e7e7; stroke-dasharray: none; }
+  </style>
+
+  <text class="title"
+        x="380.0"
+        y="30"
+        text-anchor="middle">Densidad de la edad de los atletas</text>
+
+  <g transform="translate(200,55)">
+    <g transform="translate(0, 380)">
+      <!-- axis orientation=bottom range=[0,525] ticks=7 -->
+  <g class="axis axis-bottom" transform="translate(0, 0)">
+    <line class="axis-line" x1="0" y1="0" x2="525" y2="0" stroke="currentColor" stroke-width="1"/>
+    <g class="tick" transform="translate(0, 0)">
+      <line class="tick-line" x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="0" y="9" text-anchor="middle" dominant-baseline="hanging" dy="0.15em" >0</text>
+    </g>
+    <g class="tick" transform="translate(54.12, 0)">
+      <line class="tick-line" x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="0" y="9" text-anchor="middle" dominant-baseline="hanging" dy="0.15em" >10</text>
+    </g>
+    <g class="tick" transform="translate(108.25, 0)">
+      <line class="tick-line" x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="0" y="9" text-anchor="middle" dominant-baseline="hanging" dy="0.15em" >20</text>
+    </g>
+    <g class="tick" transform="translate(162.37, 0)">
+      <line class="tick-line" x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="0" y="9" text-anchor="middle" dominant-baseline="hanging" dy="0.15em" >30</text>
+    </g>
+    <g class="tick" transform="translate(216.49, 0)">
+      <line class="tick-line" x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="0" y="9" text-anchor="middle" dominant-baseline="hanging" dy="0.15em" >40</text>
+    </g>
+    <g class="tick" transform="translate(270.62, 0)">
+      <line class="tick-line" x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="0" y="9" text-anchor="middle" dominant-baseline="hanging" dy="0.15em" >50</text>
+    </g>
+    <g class="tick" transform="translate(324.74, 0)">
+      <line class="tick-line" x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="0" y="9" text-anchor="middle" dominant-baseline="hanging" dy="0.15em" >60</text>
+    </g>
+  </g>
+
+    </g>
+
+    <g>
+      <!-- axis orientation=left range=[380,0] ticks=5 -->
+  <g class="axis axis-left" transform="translate(0, 0)">
+    <line class="axis-line" x1="0" y1="380" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+    <g class="tick" transform="translate(0, 380)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >0</text>
+      <line class="grid-line" x1="0" y1="0" x2="500" y2="0" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+    </g>
+    <g class="tick" transform="translate(0, 285)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >0.03</text>
+      <line class="grid-line" x1="0" y1="0" x2="500" y2="0" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+    </g>
+    <g class="tick" transform="translate(0, 190)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >0.05</text>
+      <line class="grid-line" x1="0" y1="0" x2="500" y2="0" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+    </g>
+    <g class="tick" transform="translate(0, 95.00)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >0.07</text>
+      <line class="grid-line" x1="0" y1="0" x2="500" y2="0" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+    </g>
+    <g class="tick" transform="translate(0, 0)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >0.10</text>
+      <line class="grid-line" x1="0" y1="0" x2="500" y2="0" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+    </g>
+  </g>
+
+    </g>
+
+    <polygon fill="#64b3c5"
+             opacity="0.82"
+             points="0,380.0
+                       54.123711340206185,379.98547633789684
+                       59.5360824742268,379.81119239265865
+                       64.94845360824742,379.433577177976
+                       70.36082474226804,377.2840751867055
+                       75.77319587628865,367.84369481963904
+                       81.18556701030928,348.00437238669633
+                       86.5979381443299,324.0548535785539
+                       92.0103092783505,301.9207925333089
+                       97.42268041237114,261.6031065348835
+                       102.83505154639175,210.9010021326851
+                       108.24742268041237,158.3979636296925
+                       113.65979381443299,101.66853945467466
+                       119.0721649484536,77.70449698442911
+                       124.48453608247422,62.294891492956026
+                       129.89690721649484,64.54605911894879
+                       135.30927835051546,93.78219093264846
+                       140.72164948453607,123.29427232630849
+                       146.13402061855672,147.25831479655412
+                       151.5463917525773,176.04421308505516
+                       156.95876288659792,213.51526131125738
+                       162.37113402061857,242.1994939650362
+                       167.78350515463916,270.2156381620688
+                       173.1958762886598,289.285206503543
+                       178.60824742268042,310.28642190474005
+                       184.020618556701,322.12320651883107
+                       189.43298969072166,334.4973666307397
+                       194.84536082474227,343.64727375574256
+                       200.25773195876286,351.6352879124911
+                       205.6701030927835,356.5878566896752
+                       211.08247422680412,359.5942547450333
+                       216.49484536082474,362.4263688551532
+                       221.90721649484536,366.15895001567026
+                       227.31958762886597,367.4225086186469
+                       232.7319587628866,368.4827359521789
+                       238.1443298969072,370.08033878352865
+                       243.55670103092785,371.5181813317434
+                       248.96907216494844,373.76934895773616
+                       254.38144329896906,374.0743458619029
+                       259.7938144329897,374.0888695240061
+                       265.2061855670103,374.74243431864915
+                       270.6185567010309,375.9624219353162
+                       276.03092783505156,377.10979124146735
+                       281.44329896907215,376.4562264468243
+                       286.85567010309273,377.0952675793642
+                       292.26804123711344,377.64716673928496
+                       297.680412371134,378.48953914126935
+                       303.0927835051546,378.09740026448355
+                       308.50515463917526,378.99786731488064
+                       313.91752577319585,378.780012383333
+                       319.3298969072165,378.73644139702344
+                       324.74226804123714,378.7219177349202
+                       330.1546391752577,379.0123909769838
+                       335.5670103092783,379.0995329496029
+                       340.97938144329896,379.186674922222
+                       346.3917525773196,379.5642901369046
+                       351.8041237113402,378.780012383333
+                       357.21649484536084,379.54976647480146
+                       362.62886597938143,379.6369084474205
+                       368.041237113402,379.6369084474205
+                       373.4536082474227,379.12858027380923
+                       378.8659793814433,379.593337461111
+                       384.2783505154639,379.5207191505951
+                       389.69072164948454,379.6514321095237
+                       395.10309278350513,379.88381070317456
+                       400.5154639175257,379.82571605476187
+                       405.9278350515464,379.9419053515873
+                       411.340206185567,379.8983343652777
+                       416.7525773195876,379.9709526757936
+                       432.9896907216495,379.95642901369047
+                       438.4020618556701,379.9709526757936
+                       454.63917525773195,379.98547633789684
+                       476.2886597938144,379.95642901369047
+                       519.5876288659794,379.98547633789684
+                       525.0,379.98547633789684
+                     525,380.0"/>
+
+    <polyline stroke="#3e3e3e"
+              stroke-width="3"
+              fill="none"
+              points="                        54.123711340206185,379.98547633789684
+                        59.5360824742268,379.81119239265865
+                        64.94845360824742,379.433577177976
+                        70.36082474226804,377.2840751867055
+                        75.77319587628865,367.84369481963904
+                        81.18556701030928,348.00437238669633
+                        86.5979381443299,324.0548535785539
+                        92.0103092783505,301.9207925333089
+                        97.42268041237114,261.6031065348835
+                        102.83505154639175,210.9010021326851
+                        108.24742268041237,158.3979636296925
+                        113.65979381443299,101.66853945467466
+                        119.0721649484536,77.70449698442911
+                        124.48453608247422,62.294891492956026
+                        129.89690721649484,64.54605911894879
+                        135.30927835051546,93.78219093264846
+                        140.72164948453607,123.29427232630849
+                        146.13402061855672,147.25831479655412
+                        151.5463917525773,176.04421308505516
+                        156.95876288659792,213.51526131125738
+                        162.37113402061857,242.1994939650362
+                        167.78350515463916,270.2156381620688
+                        173.1958762886598,289.285206503543
+                        178.60824742268042,310.28642190474005
+                        184.020618556701,322.12320651883107
+                        189.43298969072166,334.4973666307397
+                        194.84536082474227,343.64727375574256
+                        200.25773195876286,351.6352879124911
+                        205.6701030927835,356.5878566896752
+                        211.08247422680412,359.5942547450333
+                        216.49484536082474,362.4263688551532
+                        221.90721649484536,366.15895001567026
+                        227.31958762886597,367.4225086186469
+                        232.7319587628866,368.4827359521789
+                        238.1443298969072,370.08033878352865
+                        243.55670103092785,371.5181813317434
+                        248.96907216494844,373.76934895773616
+                        254.38144329896906,374.0743458619029
+                        259.7938144329897,374.0888695240061
+                        265.2061855670103,374.74243431864915
+                        270.6185567010309,375.9624219353162
+                        276.03092783505156,377.10979124146735
+                        281.44329896907215,376.4562264468243
+                        286.85567010309273,377.0952675793642
+                        292.26804123711344,377.64716673928496
+                        297.680412371134,378.48953914126935
+                        303.0927835051546,378.09740026448355
+                        308.50515463917526,378.99786731488064
+                        313.91752577319585,378.780012383333
+                        319.3298969072165,378.73644139702344
+                        324.74226804123714,378.7219177349202
+                        330.1546391752577,379.0123909769838
+                        335.5670103092783,379.0995329496029
+                        340.97938144329896,379.186674922222
+                        346.3917525773196,379.5642901369046
+                        351.8041237113402,378.780012383333
+                        357.21649484536084,379.54976647480146
+                        362.62886597938143,379.6369084474205
+                        368.041237113402,379.6369084474205
+                        373.4536082474227,379.12858027380923
+                        378.8659793814433,379.593337461111
+                        384.2783505154639,379.5207191505951
+                        389.69072164948454,379.6514321095237
+                        395.10309278350513,379.88381070317456
+                        400.5154639175257,379.82571605476187
+                        405.9278350515464,379.9419053515873
+                        411.340206185567,379.8983343652777
+                        416.7525773195876,379.9709526757936
+                        432.9896907216495,379.95642901369047
+                        438.4020618556701,379.9709526757936
+                        454.63917525773195,379.98547633789684
+                        476.2886597938144,379.95642901369047
+                        519.5876288659794,379.98547633789684
+                        525.0,379.98547633789684
+"/>
+
+      <circle
+          id="sh-edad-10" href="#row-edad-10"
+          cx="54.123711340206185"
+          cy="379.98547633789684"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-11" href="#row-edad-11"
+          cx="59.5360824742268"
+          cy="379.81119239265865"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-12" href="#row-edad-12"
+          cx="64.94845360824742"
+          cy="379.433577177976"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-13" href="#row-edad-13"
+          cx="70.36082474226804"
+          cy="377.2840751867055"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-14" href="#row-edad-14"
+          cx="75.77319587628865"
+          cy="367.84369481963904"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-15" href="#row-edad-15"
+          cx="81.18556701030928"
+          cy="348.00437238669633"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-16" href="#row-edad-16"
+          cx="86.5979381443299"
+          cy="324.0548535785539"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-17" href="#row-edad-17"
+          cx="92.0103092783505"
+          cy="301.9207925333089"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-18" href="#row-edad-18"
+          cx="97.42268041237114"
+          cy="261.6031065348835"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-19" href="#row-edad-19"
+          cx="102.83505154639175"
+          cy="210.9010021326851"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-20" href="#row-edad-20"
+          cx="108.24742268041237"
+          cy="158.3979636296925"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-21" href="#row-edad-21"
+          cx="113.65979381443299"
+          cy="101.66853945467466"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-22" href="#row-edad-22"
+          cx="119.0721649484536"
+          cy="77.70449698442911"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-23" href="#row-edad-23"
+          cx="124.48453608247422"
+          cy="62.294891492956026"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-24" href="#row-edad-24"
+          cx="129.89690721649484"
+          cy="64.54605911894879"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-25" href="#row-edad-25"
+          cx="135.30927835051546"
+          cy="93.78219093264846"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-26" href="#row-edad-26"
+          cx="140.72164948453607"
+          cy="123.29427232630849"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-27" href="#row-edad-27"
+          cx="146.13402061855672"
+          cy="147.25831479655412"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-28" href="#row-edad-28"
+          cx="151.5463917525773"
+          cy="176.04421308505516"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-29" href="#row-edad-29"
+          cx="156.95876288659792"
+          cy="213.51526131125738"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-30" href="#row-edad-30"
+          cx="162.37113402061857"
+          cy="242.1994939650362"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-31" href="#row-edad-31"
+          cx="167.78350515463916"
+          cy="270.2156381620688"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-32" href="#row-edad-32"
+          cx="173.1958762886598"
+          cy="289.285206503543"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-33" href="#row-edad-33"
+          cx="178.60824742268042"
+          cy="310.28642190474005"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-34" href="#row-edad-34"
+          cx="184.020618556701"
+          cy="322.12320651883107"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-35" href="#row-edad-35"
+          cx="189.43298969072166"
+          cy="334.4973666307397"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-36" href="#row-edad-36"
+          cx="194.84536082474227"
+          cy="343.64727375574256"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-37" href="#row-edad-37"
+          cx="200.25773195876286"
+          cy="351.6352879124911"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-38" href="#row-edad-38"
+          cx="205.6701030927835"
+          cy="356.5878566896752"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-39" href="#row-edad-39"
+          cx="211.08247422680412"
+          cy="359.5942547450333"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-40" href="#row-edad-40"
+          cx="216.49484536082474"
+          cy="362.4263688551532"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-41" href="#row-edad-41"
+          cx="221.90721649484536"
+          cy="366.15895001567026"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-42" href="#row-edad-42"
+          cx="227.31958762886597"
+          cy="367.4225086186469"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-43" href="#row-edad-43"
+          cx="232.7319587628866"
+          cy="368.4827359521789"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-44" href="#row-edad-44"
+          cx="238.1443298969072"
+          cy="370.08033878352865"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-45" href="#row-edad-45"
+          cx="243.55670103092785"
+          cy="371.5181813317434"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-46" href="#row-edad-46"
+          cx="248.96907216494844"
+          cy="373.76934895773616"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-47" href="#row-edad-47"
+          cx="254.38144329896906"
+          cy="374.0743458619029"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-48" href="#row-edad-48"
+          cx="259.7938144329897"
+          cy="374.0888695240061"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-49" href="#row-edad-49"
+          cx="265.2061855670103"
+          cy="374.74243431864915"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-50" href="#row-edad-50"
+          cx="270.6185567010309"
+          cy="375.9624219353162"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-51" href="#row-edad-51"
+          cx="276.03092783505156"
+          cy="377.10979124146735"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-52" href="#row-edad-52"
+          cx="281.44329896907215"
+          cy="376.4562264468243"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-53" href="#row-edad-53"
+          cx="286.85567010309273"
+          cy="377.0952675793642"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-54" href="#row-edad-54"
+          cx="292.26804123711344"
+          cy="377.64716673928496"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-55" href="#row-edad-55"
+          cx="297.680412371134"
+          cy="378.48953914126935"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-56" href="#row-edad-56"
+          cx="303.0927835051546"
+          cy="378.09740026448355"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-57" href="#row-edad-57"
+          cx="308.50515463917526"
+          cy="378.99786731488064"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-58" href="#row-edad-58"
+          cx="313.91752577319585"
+          cy="378.780012383333"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-59" href="#row-edad-59"
+          cx="319.3298969072165"
+          cy="378.73644139702344"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-60" href="#row-edad-60"
+          cx="324.74226804123714"
+          cy="378.7219177349202"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-61" href="#row-edad-61"
+          cx="330.1546391752577"
+          cy="379.0123909769838"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-62" href="#row-edad-62"
+          cx="335.5670103092783"
+          cy="379.0995329496029"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-63" href="#row-edad-63"
+          cx="340.97938144329896"
+          cy="379.186674922222"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-64" href="#row-edad-64"
+          cx="346.3917525773196"
+          cy="379.5642901369046"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-65" href="#row-edad-65"
+          cx="351.8041237113402"
+          cy="378.780012383333"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-66" href="#row-edad-66"
+          cx="357.21649484536084"
+          cy="379.54976647480146"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-67" href="#row-edad-67"
+          cx="362.62886597938143"
+          cy="379.6369084474205"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-68" href="#row-edad-68"
+          cx="368.041237113402"
+          cy="379.6369084474205"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-69" href="#row-edad-69"
+          cx="373.4536082474227"
+          cy="379.12858027380923"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-70" href="#row-edad-70"
+          cx="378.8659793814433"
+          cy="379.593337461111"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-71" href="#row-edad-71"
+          cx="384.2783505154639"
+          cy="379.5207191505951"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-72" href="#row-edad-72"
+          cx="389.69072164948454"
+          cy="379.6514321095237"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-73" href="#row-edad-73"
+          cx="395.10309278350513"
+          cy="379.88381070317456"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-74" href="#row-edad-74"
+          cx="400.5154639175257"
+          cy="379.82571605476187"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-75" href="#row-edad-75"
+          cx="405.9278350515464"
+          cy="379.9419053515873"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-76" href="#row-edad-76"
+          cx="411.340206185567"
+          cy="379.8983343652777"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-77" href="#row-edad-77"
+          cx="416.7525773195876"
+          cy="379.9709526757936"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-80" href="#row-edad-80"
+          cx="432.9896907216495"
+          cy="379.95642901369047"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-81" href="#row-edad-81"
+          cx="438.4020618556701"
+          cy="379.9709526757936"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-84" href="#row-edad-84"
+          cx="454.63917525773195"
+          cy="379.98547633789684"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-88" href="#row-edad-88"
+          cx="476.2886597938144"
+          cy="379.95642901369047"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-96" href="#row-edad-96"
+          cx="519.5876288659794"
+          cy="379.98547633789684"
+          r="2.5"
+          fill="#3e3e3e"/>
+      <circle
+          id="sh-edad-97" href="#row-edad-97"
+          cx="525.0"
+          cy="379.98547633789684"
+          r="2.5"
+          fill="#3e3e3e"/>
+
+    <text class="axis-label"
+          x="262.5"
+          y="425"
+          text-anchor="middle">Edad</text>
+
+    <text class="axis-label"
+          x="-75"
+          y="190.0"
+          text-anchor="middle">Densidad</text>
+  </g>
+
+  <v:table name="edad_densidad_atletas" columns="edad,densidad" visualization="chart">
+
+
+          <v:row id="row-edad-10" href="#sh-edad-10">
+
+          10,3.822016342941882e-06
+
+          </v:row>
+
+
+          <v:row id="row-edad-11" href="#sh-edad-11">
+
+          11,4.968621245824447e-05
+
+          </v:row>
+
+
+          <v:row id="row-edad-12" href="#sh-edad-12">
+
+          12,0.0001490586373747334
+
+          </v:row>
+
+
+          <v:row id="row-edad-13" href="#sh-edad-13">
+
+          13,0.000714717056130132
+
+          </v:row>
+
+
+          <v:row id="row-edad-14" href="#sh-edad-14">
+
+          14,0.0031990276790423555
+
+          </v:row>
+
+
+          <v:row id="row-edad-15" href="#sh-edad-15">
+
+          15,0.008419902003500967
+
+          </v:row>
+
+
+          <v:row id="row-edad-16" href="#sh-edad-16">
+
+          16,0.014722406953012131
+
+          </v:row>
+
+
+          <v:row id="row-edad-17" href="#sh-edad-17">
+
+          17,0.02054715985965556
+
+          </v:row>
+
+
+          <v:row id="row-edad-18" href="#sh-edad-18">
+
+          18,0.031157077227662224
+
+          </v:row>
+
+
+          <v:row id="row-edad-19" href="#sh-edad-19">
+
+          19,0.04449973628087234
+
+          </v:row>
+
+
+          <v:row id="row-edad-20" href="#sh-edad-20">
+
+          20,0.05831632536060724
+
+          </v:row>
+
+
+          <v:row id="row-edad-21" href="#sh-edad-21">
+
+          21,0.07324512119613824
+
+          </v:row>
+
+
+          <v:row id="row-edad-22" href="#sh-edad-22">
+
+          22,0.07955144816199235
+
+          </v:row>
+
+
+          <v:row id="row-edad-23" href="#sh-edad-23">
+
+          23,0.08360660750185368
+
+          </v:row>
+
+
+          <v:row id="row-edad-24" href="#sh-edad-24">
+
+          24,0.08301419496869769
+
+          </v:row>
+
+
+          <v:row id="row-edad-25" href="#sh-edad-25">
+
+          25,0.07532047607035568
+
+          </v:row>
+
+
+          <v:row id="row-edad-26" href="#sh-edad-26">
+
+          26,0.06755413886149778
+
+          </v:row>
+
+
+          <v:row id="row-edad-27" href="#sh-edad-27">
+
+          27,0.06124781189564366
+
+          </v:row>
+
+
+          <v:row id="row-edad-28" href="#sh-edad-28">
+
+          28,0.053672575503932854
+
+          </v:row>
+
+
+          <v:row id="row-edad-29" href="#sh-edad-29">
+
+          29,0.043811773339142795
+
+          </v:row>
+
+
+          <v:row id="row-edad-30" href="#sh-edad-30">
+
+          30,0.036263291061832584
+
+          </v:row>
+
+
+          <v:row id="row-edad-31" href="#sh-edad-31">
+
+          31,0.02889062153629769
+
+          </v:row>
+
+
+          <v:row id="row-edad-32" href="#sh-edad-32">
+
+          32,0.023872314078014996
+
+          </v:row>
+
+
+          <v:row id="row-edad-33" href="#sh-edad-33">
+
+          33,0.018345678446121037
+
+          </v:row>
+
+
+          <v:row id="row-edad-34" href="#sh-edad-34">
+
+          34,0.015230735126623401
+
+          </v:row>
+
+
+          <v:row id="row-edad-35" href="#sh-edad-35">
+
+          35,0.011974377202436918
+
+          </v:row>
+
+
+          <v:row id="row-edad-36" href="#sh-edad-36">
+
+          36,0.009566506906383531
+
+          </v:row>
+
+
+          <v:row id="row-edad-37" href="#sh-edad-37">
+
+          37,0.007464397917765497
+
+          </v:row>
+
+
+          <v:row id="row-edad-38" href="#sh-edad-38">
+
+          38,0.006161090344822314
+
+          </v:row>
+
+
+          <v:row id="row-edad-39" href="#sh-edad-39">
+
+          39,0.005369932961833345
+
+          </v:row>
+
+
+          <v:row id="row-edad-40" href="#sh-edad-40">
+
+          40,0.004624639774959678
+
+          </v:row>
+
+
+          <v:row id="row-edad-41" href="#sh-edad-41">
+
+          41,0.003642381574823614
+
+          </v:row>
+
+
+          <v:row id="row-edad-42" href="#sh-edad-42">
+
+          42,0.00330986615298767
+
+          </v:row>
+
+
+          <v:row id="row-edad-43" href="#sh-edad-43">
+
+          43,0.0030308589599529127
+
+          </v:row>
+
+
+          <v:row id="row-edad-44" href="#sh-edad-44">
+
+          44,0.0026104371622293057
+
+          </v:row>
+
+
+          <v:row id="row-edad-45" href="#sh-edad-45">
+
+          45,0.0022320575442780592
+
+          </v:row>
+
+
+          <v:row id="row-edad-46" href="#sh-edad-46">
+
+          46,0.0016396450111220676
+
+          </v:row>
+
+
+          <v:row id="row-edad-47" href="#sh-edad-47">
+
+          47,0.001559382667920288
+
+          </v:row>
+
+
+          <v:row id="row-edad-48" href="#sh-edad-48">
+
+          48,0.0015555606515773462
+
+          </v:row>
+
+
+          <v:row id="row-edad-49" href="#sh-edad-49">
+
+          49,0.0013835699161449614
+
+          </v:row>
+
+
+          <v:row id="row-edad-50" href="#sh-edad-50">
+
+          50,0.0010625205433378432
+
+          </v:row>
+
+
+          <v:row id="row-edad-51" href="#sh-edad-51">
+
+          51,0.0007605812522454346
+
+          </v:row>
+
+
+          <v:row id="row-edad-52" href="#sh-edad-52">
+
+          52,0.0009325719876778193
+
+          </v:row>
+
+
+          <v:row id="row-edad-53" href="#sh-edad-53">
+
+          53,0.0007644032685883765
+
+          </v:row>
+
+
+          <v:row id="row-edad-54" href="#sh-edad-54">
+
+          54,0.000619166647556585
+
+          </v:row>
+
+
+          <v:row id="row-edad-55" href="#sh-edad-55">
+
+          55,0.00039748969966595576
+
+          </v:row>
+
+
+          <v:row id="row-edad-56" href="#sh-edad-56">
+
+          56,0.0005006841409253866
+
+          </v:row>
+
+
+          <v:row id="row-edad-57" href="#sh-edad-57">
+
+          57,0.00026371912766298987
+
+          </v:row>
+
+
+          <v:row id="row-edad-58" href="#sh-edad-58">
+
+          58,0.00032104937280711814
+
+          </v:row>
+
+
+          <v:row id="row-edad-59" href="#sh-edad-59">
+
+          59,0.00033251542183594375
+
+          </v:row>
+
+
+          <v:row id="row-edad-60" href="#sh-edad-60">
+
+          60,0.0003363374381788857
+
+          </v:row>
+
+
+          <v:row id="row-edad-61" href="#sh-edad-61">
+
+          61,0.000259897111320048
+
+          </v:row>
+
+
+          <v:row id="row-edad-62" href="#sh-edad-62">
+
+          62,0.00023696501326239672
+
+          </v:row>
+
+
+          <v:row id="row-edad-63" href="#sh-edad-63">
+
+          63,0.00021403291520474542
+
+          </v:row>
+
+
+          <v:row id="row-edad-64" href="#sh-edad-64">
+
+          64,0.00011466049028825648
+
+          </v:row>
+
+
+          <v:row id="row-edad-65" href="#sh-edad-65">
+
+          65,0.00032104937280711814
+
+          </v:row>
+
+
+          <v:row id="row-edad-66" href="#sh-edad-66">
+
+          66,0.00011848250663119836
+
+          </v:row>
+
+
+          <v:row id="row-edad-67" href="#sh-edad-67">
+
+          67,9.555040857354706e-05
+
+          </v:row>
+
+
+          <v:row id="row-edad-68" href="#sh-edad-68">
+
+          68,9.555040857354706e-05
+
+          </v:row>
+
+
+          <v:row id="row-edad-69" href="#sh-edad-69">
+
+          69,0.00022932098057651295
+
+          </v:row>
+
+
+          <v:row id="row-edad-70" href="#sh-edad-70">
+
+          70,0.00010701645760237271
+
+          </v:row>
+
+
+          <v:row id="row-edad-71" href="#sh-edad-71">
+
+          71,0.00012612653931708213
+
+          </v:row>
+
+
+          <v:row id="row-edad-72" href="#sh-edad-72">
+
+          72,9.172839223060517e-05
+
+          </v:row>
+
+
+          <v:row id="row-edad-73" href="#sh-edad-73">
+
+          73,3.057613074353506e-05
+
+          </v:row>
+
+
+          <v:row id="row-edad-74" href="#sh-edad-74">
+
+          74,4.5864196115302586e-05
+
+          </v:row>
+
+
+          <v:row id="row-edad-75" href="#sh-edad-75">
+
+          75,1.528806537176753e-05
+
+          </v:row>
+
+
+          <v:row id="row-edad-76" href="#sh-edad-76">
+
+          76,2.6754114400593177e-05
+
+          </v:row>
+
+
+          <v:row id="row-edad-77" href="#sh-edad-77">
+
+          77,7.644032685883764e-06
+
+          </v:row>
+
+
+          <v:row id="row-edad-80" href="#sh-edad-80">
+
+          80,1.1466049028825647e-05
+
+          </v:row>
+
+
+          <v:row id="row-edad-81" href="#sh-edad-81">
+
+          81,7.644032685883764e-06
+
+          </v:row>
+
+
+          <v:row id="row-edad-84" href="#sh-edad-84">
+
+          84,3.822016342941882e-06
+
+          </v:row>
+
+
+          <v:row id="row-edad-88" href="#sh-edad-88">
+
+          88,1.1466049028825647e-05
+
+          </v:row>
+
+
+          <v:row id="row-edad-96" href="#sh-edad-96">
+
+          96,3.822016342941882e-06
+
+          </v:row>
+
+
+          <v:row id="row-edad-97" href="#sh-edad-97">
+
+          97,3.822016342941882e-06
+
+          </v:row>
+
+
+  </v:table>
+</svg>

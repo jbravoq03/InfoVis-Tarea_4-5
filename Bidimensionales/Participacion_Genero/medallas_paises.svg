@@ -1,0 +1,1049 @@
+
+
+<svg style="width:100vw; height:100vh; display:block;"
+     xmlns:v="https://odviz.org/1.0/"
+     xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 680 500"
+     >
+  
+   <style>
+    .title { font-family: Arial, sans-serif; font-size: 21px; font-weight: 700; }
+    .axis-label { font-family: Arial, sans-serif; font-size: 16px; fill: #000; }
+    .tick-label { font-family: Arial, sans-serif; font-size: 12px; fill: #222; }
+    .axis-line, .tick-line { stroke: #e5e5e5; }
+    .grid-line { stroke: #e5e5e5; }
+  </style>
+
+  <text class="title"
+        x="340.0"
+        y="60"
+        text-anchor="middle">Top 30 Paises con Mas Medallas</text>
+
+  <g transform="translate(120,80)">
+
+          
+    <g transform = "translate(0, 350 )">
+    <!-- axis orientation=bottom range=[0,520] ticks=7 -->
+  <g class="axis axis-bottom" transform="translate(0, 0)">
+    <line class="axis-line" x1="0" y1="0" x2="520" y2="0" stroke="currentColor" stroke-width="1"/>
+    <g class="tick" transform="translate(0, 0)">
+      <line class="tick-line" x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="0" y="9" text-anchor="middle" dominant-baseline="hanging" dy="0.15em" >0</text>
+    </g>
+    <g class="tick" transform="translate(86.67, 0)">
+      <line class="tick-line" x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="0" y="9" text-anchor="middle" dominant-baseline="hanging" dy="0.15em" >1000</text>
+    </g>
+    <g class="tick" transform="translate(173.33, 0)">
+      <line class="tick-line" x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="0" y="9" text-anchor="middle" dominant-baseline="hanging" dy="0.15em" >2000</text>
+    </g>
+    <g class="tick" transform="translate(260, 0)">
+      <line class="tick-line" x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="0" y="9" text-anchor="middle" dominant-baseline="hanging" dy="0.15em" >3000</text>
+    </g>
+    <g class="tick" transform="translate(346.67, 0)">
+      <line class="tick-line" x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="0" y="9" text-anchor="middle" dominant-baseline="hanging" dy="0.15em" >4000</text>
+    </g>
+    <g class="tick" transform="translate(433.33, 0)">
+      <line class="tick-line" x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="0" y="9" text-anchor="middle" dominant-baseline="hanging" dy="0.15em" >5000</text>
+    </g>
+    <g class="tick" transform="translate(520, 0)">
+      <line class="tick-line" x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="0" y="9" text-anchor="middle" dominant-baseline="hanging" dy="0.15em" >6000</text>
+    </g>
+  </g>
+
+    </g>
+
+    <!-- axis orientation=left range=[350,0] ticks=30 -->
+  <g class="axis axis-left" transform="translate(0, 0)">
+    <line class="axis-line" x1="0" y1="350" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+    <g class="tick" transform="translate(0, 350)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >YUG</text>
+    </g>
+    <g class="tick" transform="translate(0, 338.33)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >CUB</text>
+    </g>
+    <g class="tick" transform="translate(0, 326.67)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >AUT</text>
+    </g>
+    <g class="tick" transform="translate(0, 315)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >BEL</text>
+    </g>
+    <g class="tick" transform="translate(0, 303.33)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >BRA</text>
+    </g>
+    <g class="tick" transform="translate(0, 291.67)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >TCH</text>
+    </g>
+    <g class="tick" transform="translate(0, 280)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >ESP</text>
+    </g>
+    <g class="tick" transform="translate(0, 268.33)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >POL</text>
+    </g>
+    <g class="tick" transform="translate(0, 256.67)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >FRG</text>
+    </g>
+    <g class="tick" transform="translate(0, 245)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >DEN</text>
+    </g>
+    <g class="tick" transform="translate(0, 233.33)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >KOR</text>
+    </g>
+    <g class="tick" transform="translate(0, 221.67)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >ROU</text>
+    </g>
+    <g class="tick" transform="translate(0, 210)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >SUI</text>
+    </g>
+    <g class="tick" transform="translate(0, 198.33)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >FIN</text>
+    </g>
+    <g class="tick" transform="translate(0, 186.67)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >JPN</text>
+    </g>
+    <g class="tick" transform="translate(0, 175)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >CHN</text>
+    </g>
+    <g class="tick" transform="translate(0, 163.33)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >GDR</text>
+    </g>
+    <g class="tick" transform="translate(0, 151.67)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >NOR</text>
+    </g>
+    <g class="tick" transform="translate(0, 140)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >NED</text>
+    </g>
+    <g class="tick" transform="translate(0, 128.33)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >HUN</text>
+    </g>
+    <g class="tick" transform="translate(0, 116.67)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >RUS</text>
+    </g>
+    <g class="tick" transform="translate(0, 105)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >AUS</text>
+    </g>
+    <g class="tick" transform="translate(0, 93.33)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >CAN</text>
+    </g>
+    <g class="tick" transform="translate(0, 81.67)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >SWE</text>
+    </g>
+    <g class="tick" transform="translate(0, 70)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >ITA</text>
+    </g>
+    <g class="tick" transform="translate(0, 58.33)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >FRA</text>
+    </g>
+    <g class="tick" transform="translate(0, 46.67)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >GBR</text>
+    </g>
+    <g class="tick" transform="translate(0, 35)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >GER</text>
+    </g>
+    <g class="tick" transform="translate(0, 23.33)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >URS</text>
+    </g>
+    <g class="tick" transform="translate(0, 11.67)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >USA</text>
+    </g>
+  </g>
+
+
+
+    <text class="axis-label" text-anchor="middle"
+      x="260.0"
+      y="395">
+      Cantidad de Medallas
+    </text>
+
+    <text class="axis-label"
+        x="-75"
+        y="175.0"
+        text-anchor="middle"> Pais </text>
+    
+    <g>
+
+
+
+
+
+            <line
+                x1="0"
+                x2="33.800000000000004"
+                y1="350.0"
+                y2="350.0"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-YUG" href="#row-co-YUG"
+                cx="33.800000000000004"
+                cy="350.0"
+                r="4"
+                fill="#2c7fb8"
+            />
+
+
+
+
+
+
+            <line
+                x1="0"
+                x2="35.446666666666665"
+                y1="338.3333333333333"
+                y2="338.3333333333333"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-CUB" href="#row-co-CUB"
+                cx="35.446666666666665"
+                cy="338.3333333333333"
+                r="4"
+                fill="#2c7fb8"
+            />
+
+
+
+
+
+
+            <line
+                x1="0"
+                x2="39.0"
+                y1="326.6666666666667"
+                y2="326.6666666666667"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-AUT" href="#row-co-AUT"
+                cx="39.0"
+                cy="326.6666666666667"
+                r="4"
+                fill="#2c7fb8"
+            />
+
+
+
+
+
+
+            <line
+                x1="0"
+                x2="40.56"
+                y1="315.0"
+                y2="315.0"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-BEL" href="#row-co-BEL"
+                cx="40.56"
+                cy="315.0"
+                r="4"
+                fill="#2c7fb8"
+            />
+
+
+
+
+
+
+            <line
+                x1="0"
+                x2="41.166666666666664"
+                y1="303.3333333333333"
+                y2="303.3333333333333"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-BRA" href="#row-co-BRA"
+                cx="41.166666666666664"
+                cy="303.3333333333333"
+                r="4"
+                fill="#2c7fb8"
+            />
+
+
+
+
+
+
+            <line
+                x1="0"
+                x2="42.29333333333333"
+                y1="291.6666666666667"
+                y2="291.6666666666667"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-TCH" href="#row-co-TCH"
+                cx="42.29333333333333"
+                cy="291.6666666666667"
+                r="4"
+                fill="#2c7fb8"
+            />
+
+
+
+
+
+
+            <line
+                x1="0"
+                x2="42.38"
+                y1="280.0"
+                y2="280.0"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-ESP" href="#row-co-ESP"
+                cx="42.38"
+                cy="280.0"
+                r="4"
+                fill="#2c7fb8"
+            />
+
+
+
+
+
+
+            <line
+                x1="0"
+                x2="48.96666666666666"
+                y1="268.33333333333337"
+                y2="268.33333333333337"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-POL" href="#row-co-POL"
+                cx="48.96666666666666"
+                cy="268.33333333333337"
+                r="4"
+                fill="#2c7fb8"
+            />
+
+
+
+
+
+
+            <line
+                x1="0"
+                x2="50.78666666666667"
+                y1="256.6666666666667"
+                y2="256.6666666666667"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-FRG" href="#row-co-FRG"
+                cx="50.78666666666667"
+                cy="256.6666666666667"
+                r="4"
+                fill="#2c7fb8"
+            />
+
+
+
+
+
+
+            <line
+                x1="0"
+                x2="51.74"
+                y1="245.0"
+                y2="245.0"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-DEN" href="#row-co-DEN"
+                cx="51.74"
+                cy="245.0"
+                r="4"
+                fill="#2c7fb8"
+            />
+
+
+
+
+
+
+            <line
+                x1="0"
+                x2="55.29333333333334"
+                y1="233.33333333333334"
+                y2="233.33333333333334"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-KOR" href="#row-co-KOR"
+                cx="55.29333333333334"
+                cy="233.33333333333334"
+                r="4"
+                fill="#2c7fb8"
+            />
+
+
+
+
+
+
+            <line
+                x1="0"
+                x2="56.593333333333334"
+                y1="221.66666666666669"
+                y2="221.66666666666669"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-ROU" href="#row-co-ROU"
+                cx="56.593333333333334"
+                cy="221.66666666666669"
+                r="4"
+                fill="#2c7fb8"
+            />
+
+
+
+
+
+
+            <line
+                x1="0"
+                x2="59.88666666666667"
+                y1="210.0"
+                y2="210.0"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-SUI" href="#row-co-SUI"
+                cx="59.88666666666667"
+                cy="210.0"
+                r="4"
+                fill="#2c7fb8"
+            />
+
+
+
+
+
+
+            <line
+                x1="0"
+                x2="78.0"
+                y1="198.33333333333334"
+                y2="198.33333333333334"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-FIN" href="#row-co-FIN"
+                cx="78.0"
+                cy="198.33333333333334"
+                r="4"
+                fill="#2c7fb8"
+            />
+
+
+
+
+
+
+            <line
+                x1="0"
+                x2="79.12666666666667"
+                y1="186.66666666666669"
+                y2="186.66666666666669"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-JPN" href="#row-co-JPN"
+                cx="79.12666666666667"
+                cy="186.66666666666669"
+                r="4"
+                fill="#2c7fb8"
+            />
+
+
+
+
+
+
+            <line
+                x1="0"
+                x2="85.71333333333334"
+                y1="175.0"
+                y2="175.0"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-CHN" href="#row-co-CHN"
+                cx="85.71333333333334"
+                cy="175.0"
+                r="4"
+                fill="#2c7fb8"
+            />
+
+
+
+
+
+
+            <line
+                x1="0"
+                x2="87.10000000000001"
+                y1="163.33333333333334"
+                y2="163.33333333333334"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-GDR" href="#row-co-GDR"
+                cx="87.10000000000001"
+                cy="163.33333333333334"
+                r="4"
+                fill="#66c2a5"
+            />
+
+
+
+
+
+
+            <line
+                x1="0"
+                x2="89.52666666666667"
+                y1="151.66666666666669"
+                y2="151.66666666666669"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-NOR" href="#row-co-NOR"
+                cx="89.52666666666667"
+                cy="151.66666666666669"
+                r="4"
+                fill="#66c2a5"
+            />
+
+
+
+
+
+
+            <line
+                x1="0"
+                x2="90.13333333333334"
+                y1="140.0"
+                y2="140.0"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-NED" href="#row-co-NED"
+                cx="90.13333333333334"
+                cy="140.0"
+                r="4"
+                fill="#66c2a5"
+            />
+
+
+
+
+
+
+            <line
+                x1="0"
+                x2="98.36666666666667"
+                y1="128.33333333333334"
+                y2="128.33333333333334"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-HUN" href="#row-co-HUN"
+                cx="98.36666666666667"
+                cy="128.33333333333334"
+                r="4"
+                fill="#66c2a5"
+            />
+
+
+
+
+
+
+            <line
+                x1="0"
+                x2="100.96666666666665"
+                y1="116.66666666666669"
+                y2="116.66666666666669"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-RUS" href="#row-co-RUS"
+                cx="100.96666666666665"
+                cy="116.66666666666669"
+                r="4"
+                fill="#66c2a5"
+            />
+
+
+
+
+
+
+            <line
+                x1="0"
+                x2="114.4"
+                y1="105.0"
+                y2="105.0"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-AUS" href="#row-co-AUS"
+                cx="114.4"
+                cy="105.0"
+                r="4"
+                fill="#66c2a5"
+            />
+
+
+
+
+
+
+            <line
+                x1="0"
+                x2="117.17333333333333"
+                y1="93.33333333333337"
+                y2="93.33333333333337"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-CAN" href="#row-co-CAN"
+                cx="117.17333333333333"
+                cy="93.33333333333337"
+                r="4"
+                fill="#66c2a5"
+            />
+
+
+
+
+
+
+            <line
+                x1="0"
+                x2="133.12"
+                y1="81.66666666666669"
+                y2="81.66666666666669"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-SWE" href="#row-co-SWE"
+                cx="133.12"
+                cy="81.66666666666669"
+                r="4"
+                fill="#66c2a5"
+            />
+
+
+
+
+
+
+            <line
+                x1="0"
+                x2="141.87333333333333"
+                y1="70.0"
+                y2="70.0"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-ITA" href="#row-co-ITA"
+                cx="141.87333333333333"
+                cy="70.0"
+                r="4"
+                fill="#66c2a5"
+            />
+
+
+
+
+
+
+            <line
+                x1="0"
+                x2="154.0066666666667"
+                y1="58.33333333333337"
+                y2="58.33333333333337"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-FRA" href="#row-co-FRA"
+                cx="154.0066666666667"
+                cy="58.33333333333337"
+                r="4"
+                fill="#66c2a5"
+            />
+
+
+
+
+
+
+            <line
+                x1="0"
+                x2="179.22666666666666"
+                y1="46.666666666666686"
+                y2="46.666666666666686"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-GBR" href="#row-co-GBR"
+                cx="179.22666666666666"
+                cy="46.666666666666686"
+                r="4"
+                fill="#a6d96a"
+            />
+
+
+
+
+
+
+            <line
+                x1="0"
+                x2="187.63333333333333"
+                y1="35.0"
+                y2="35.0"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-GER" href="#row-co-GER"
+                cx="187.63333333333333"
+                cy="35.0"
+                r="4"
+                fill="#a6d96a"
+            />
+
+
+
+
+
+
+            <line
+                x1="0"
+                x2="216.92666666666668"
+                y1="23.33333333333337"
+                y2="23.33333333333337"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-URS" href="#row-co-URS"
+                cx="216.92666666666668"
+                cy="23.33333333333337"
+                r="4"
+                fill="#a6d96a"
+            />
+
+
+
+
+
+
+            <line
+                x1="0"
+                x2="488.54"
+                y1="11.666666666666686"
+                y2="11.666666666666686"
+                stroke="#ccc"
+            />
+
+            <circle
+                id="sh-co-USA" href="#row-co-USA"
+                cx="488.54"
+                cy="11.666666666666686"
+                r="4"
+                fill="#ffd700"
+            />
+
+
+    </g>
+  </g>
+  <v:table name="medallas_paises" columns="pais,cantidad" visualization="chart">
+        
+
+            <v:row id="row-co-YUG" href="#sh-co-YUG">
+            
+            YUG,390
+            
+            </v:row>
+            
+
+            <v:row id="row-co-CUB" href="#sh-co-CUB">
+            
+            CUB,409
+            
+            </v:row>
+            
+
+            <v:row id="row-co-AUT" href="#sh-co-AUT">
+            
+            AUT,450
+            
+            </v:row>
+            
+
+            <v:row id="row-co-BEL" href="#sh-co-BEL">
+            
+            BEL,468
+            
+            </v:row>
+            
+
+            <v:row id="row-co-BRA" href="#sh-co-BRA">
+            
+            BRA,475
+            
+            </v:row>
+            
+
+            <v:row id="row-co-TCH" href="#sh-co-TCH">
+            
+            TCH,488
+            
+            </v:row>
+            
+
+            <v:row id="row-co-ESP" href="#sh-co-ESP">
+            
+            ESP,489
+            
+            </v:row>
+            
+
+            <v:row id="row-co-POL" href="#sh-co-POL">
+            
+            POL,565
+            
+            </v:row>
+            
+
+            <v:row id="row-co-FRG" href="#sh-co-FRG">
+            
+            FRG,586
+            
+            </v:row>
+            
+
+            <v:row id="row-co-DEN" href="#sh-co-DEN">
+            
+            DEN,597
+            
+            </v:row>
+            
+
+            <v:row id="row-co-KOR" href="#sh-co-KOR">
+            
+            KOR,638
+            
+            </v:row>
+            
+
+            <v:row id="row-co-ROU" href="#sh-co-ROU">
+            
+            ROU,653
+            
+            </v:row>
+            
+
+            <v:row id="row-co-SUI" href="#sh-co-SUI">
+            
+            SUI,691
+            
+            </v:row>
+            
+
+            <v:row id="row-co-FIN" href="#sh-co-FIN">
+            
+            FIN,900
+            
+            </v:row>
+            
+
+            <v:row id="row-co-JPN" href="#sh-co-JPN">
+            
+            JPN,913
+            
+            </v:row>
+            
+
+            <v:row id="row-co-CHN" href="#sh-co-CHN">
+            
+            CHN,989
+            
+            </v:row>
+            
+
+            <v:row id="row-co-GDR" href="#sh-co-GDR">
+            
+            GDR,1005
+            
+            </v:row>
+            
+
+            <v:row id="row-co-NOR" href="#sh-co-NOR">
+            
+            NOR,1033
+            
+            </v:row>
+            
+
+            <v:row id="row-co-NED" href="#sh-co-NED">
+            
+            NED,1040
+            
+            </v:row>
+            
+
+            <v:row id="row-co-HUN" href="#sh-co-HUN">
+            
+            HUN,1135
+            
+            </v:row>
+            
+
+            <v:row id="row-co-RUS" href="#sh-co-RUS">
+            
+            RUS,1165
+            
+            </v:row>
+            
+
+            <v:row id="row-co-AUS" href="#sh-co-AUS">
+            
+            AUS,1320
+            
+            </v:row>
+            
+
+            <v:row id="row-co-CAN" href="#sh-co-CAN">
+            
+            CAN,1352
+            
+            </v:row>
+            
+
+            <v:row id="row-co-SWE" href="#sh-co-SWE">
+            
+            SWE,1536
+            
+            </v:row>
+            
+
+            <v:row id="row-co-ITA" href="#sh-co-ITA">
+            
+            ITA,1637
+            
+            </v:row>
+            
+
+            <v:row id="row-co-FRA" href="#sh-co-FRA">
+            
+            FRA,1777
+            
+            </v:row>
+            
+
+            <v:row id="row-co-GBR" href="#sh-co-GBR">
+            
+            GBR,2068
+            
+            </v:row>
+            
+
+            <v:row id="row-co-GER" href="#sh-co-GER">
+            
+            GER,2165
+            
+            </v:row>
+            
+
+            <v:row id="row-co-URS" href="#sh-co-URS">
+            
+            URS,2503
+            
+            </v:row>
+            
+
+            <v:row id="row-co-USA" href="#sh-co-USA">
+            
+            USA,5637
+            
+            </v:row>
+            
+
+    </v:table>
+</svg>
+      
+
