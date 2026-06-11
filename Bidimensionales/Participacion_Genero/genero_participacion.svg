@@ -1,0 +1,946 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<svg style="width:100vw; height:100vh; display:block;"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:v="https://odviz.org/1.0/"
+     viewBox="0 0 900 470">
+  <style>
+    .tick-label { font-family: sans-serif; fill: #333; }
+    .axis-line, .tick-line { stroke: #ddd; }
+    .grid-line { stroke: #e6e6e6; }
+    text { font-family: sans-serif; }
+  </style>
+
+  <text x="450.0"
+        y="26"
+        text-anchor="middle"
+        font-size="20">Proporcion de participacion por genero a lo largo del tiempo</text>
+
+  <g transform="translate(120,30)">
+    <g transform="translate(0, 320)">
+      <!-- axis orientation=bottom range=[60,520] ticks=4 -->
+  <g class="axis axis-bottom" transform="translate(0, 0)">
+    <line class="axis-line" x1="60" y1="0" x2="520" y2="0" stroke="currentColor" stroke-width="1"/>
+    <g class="tick" transform="translate(60.66, 0)">
+      <line class="tick-line" x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="0" y="9" text-anchor="middle" dominant-baseline="hanging" dy="0.15em" >1896</text>
+    </g>
+    <g class="tick" transform="translate(192.09, 0)">
+      <line class="tick-line" x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="0" y="9" text-anchor="middle" dominant-baseline="hanging" dy="0.15em" >1936</text>
+    </g>
+    <g class="tick" transform="translate(323.51, 0)">
+      <line class="tick-line" x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="0" y="9" text-anchor="middle" dominant-baseline="hanging" dy="0.15em" >1984</text>
+    </g>
+    <g class="tick" transform="translate(454.94, 0)">
+      <line class="tick-line" x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="0" y="9" text-anchor="middle" dominant-baseline="hanging" dy="0.15em" >2008</text>
+    </g>
+  </g>
+
+    </g>
+
+    <g transform="translate(60, 0)">
+      <!-- axis orientation=left range=[320,50] ticks=5 -->
+  <g class="axis axis-left" transform="translate(0, 0)">
+    <line class="axis-line" x1="0" y1="320" x2="0" y2="50" stroke="currentColor" stroke-width="1"/>
+    <g class="tick" transform="translate(0, 320)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >0</text>
+      <line class="grid-line" x1="0" y1="0" x2="500" y2="0" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+    </g>
+    <g class="tick" transform="translate(0, 252.50)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >25</text>
+      <line class="grid-line" x1="0" y1="0" x2="500" y2="0" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+    </g>
+    <g class="tick" transform="translate(0, 185)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >50</text>
+      <line class="grid-line" x1="0" y1="0" x2="500" y2="0" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+    </g>
+    <g class="tick" transform="translate(0, 117.50)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >75</text>
+      <line class="grid-line" x1="0" y1="0" x2="500" y2="0" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+    </g>
+    <g class="tick" transform="translate(0, 50)">
+      <line class="tick-line" x1="-6" y1="0" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+      <text class="tick-label" x="-9" y="0" text-anchor="end" dominant-baseline="central" >100</text>
+      <line class="grid-line" x1="0" y1="0" x2="500" y2="0" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,4"/>
+    </g>
+  </g>
+
+    </g>
+
+    <path d="M 66.5714 320 Q 73.1429 320 79.7143 315.398 C 81.9048 315.398 91.7619 316.679 92.8571 316.679 C 95.0476 316.679 104.905 318.286 106 318.286 C 108.19 318.286 118.048 315.908 119.143 315.908 C 121.333 315.908 131.19 314.186 132.286 314.186 C 134.476 314.186 144.333 311.57 145.429 311.57 C 147.619 311.57 157.476 307.622 158.571 307.622 C 160.762 307.622 170.619 298.832 171.714 298.832 C 173.905 298.832 183.762 290 184.857 290 C 187.048 290 196.905 299.972 198 299.972 C 200.19 299.972 210.048 292.531 211.143 292.531 C 213.333 292.531 223.19 271.47 224.286 271.47 C 226.476 271.47 236.333 272.202 237.429 272.202 C 239.619 272.202 249.476 269.421 250.571 269.421 C 252.762 269.421 262.619 270.101 263.714 270.101 C 265.905 270.101 275.762 263.496 276.857 263.496 C 279.048 263.496 288.905 261.119 290 261.119 C 292.19 261.119 302.048 253.001 303.143 253.001 C 305.333 253.001 315.19 253.958 316.286 253.958 C 318.476 253.958 328.333 250.496 329.429 250.496 C 331.619 250.496 341.476 242.308 342.571 242.308 C 344.762 242.308 354.619 234.82 355.714 234.82 C 357.905 234.82 367.762 225.585 368.857 225.585 C 371.048 225.585 380.905 221.875 382 221.875 C 384.19 221.875 394.048 216.344 395.143 216.344 C 397.333 216.344 407.19 213.903 408.286 213.903 C 410.476 213.903 420.333 216.048 421.429 216.048 C 423.619 216.048 433.476 208.61 434.571 208.61 C 436.762 208.61 446.619 211.741 447.714 211.741 C 449.905 211.741 459.762 204.552 460.857 204.552 C 463.048 204.552 472.905 206.713 474 206.713 C 476.19 206.713 486.048 198.479 487.143 198.479 C 489.333 198.479 499.19 208.323 500.286 208.323 C 502.476 208.323 512.333 197.249 513.429 197.249"
+          stroke="#ff6f69" stroke-width="3" fill="none"/>
+    <path d="M 66.5714 50 Q 73.1429 50 79.7143 54.6023 C 81.9048 54.6023 91.7619 53.3205 92.8571 53.3205 C 95.0476 53.3205 104.905 51.7138 106 51.7138 C 108.19 51.7138 118.048 54.0922 119.143 54.0922 C 121.333 54.0922 131.19 55.8144 132.286 55.8144 C 134.476 55.8144 144.333 58.4296 145.429 58.4296 C 147.619 58.4296 157.476 62.3784 158.571 62.3784 C 160.762 62.3784 170.619 71.1679 171.714 71.1679 C 173.905 71.1679 183.762 80 184.857 80 C 187.048 80 196.905 70.0284 198 70.0284 C 200.19 70.0284 210.048 77.4693 211.143 77.4693 C 213.333 77.4693 223.19 98.5296 224.286 98.5296 C 226.476 98.5296 236.333 97.7976 237.429 97.7976 C 239.619 97.7976 249.476 100.579 250.571 100.579 C 252.762 100.579 262.619 99.8987 263.714 99.8987 C 265.905 99.8987 275.762 106.504 276.857 106.504 C 279.048 106.504 288.905 108.881 290 108.881 C 292.19 108.881 302.048 116.999 303.143 116.999 C 305.333 116.999 315.19 116.042 316.286 116.042 C 318.476 116.042 328.333 119.504 329.429 119.504 C 331.619 119.504 341.476 127.692 342.571 127.692 C 344.762 127.692 354.619 135.18 355.714 135.18 C 357.905 135.18 367.762 144.415 368.857 144.415 C 371.048 144.415 380.905 148.125 382 148.125 C 384.19 148.125 394.048 153.656 395.143 153.656 C 397.333 153.656 407.19 156.097 408.286 156.097 C 410.476 156.097 420.333 153.952 421.429 153.952 C 423.619 153.952 433.476 161.39 434.571 161.39 C 436.762 161.39 446.619 158.259 447.714 158.259 C 449.905 158.259 459.762 165.448 460.857 165.448 C 463.048 165.448 472.905 163.287 474 163.287 C 476.19 163.287 486.048 171.521 487.143 171.521 C 489.333 171.521 499.19 161.677 500.286 161.677 C 502.476 161.677 512.333 172.751 513.429 172.751"
+          stroke="#08b4ba" stroke-width="3" fill="none"/>
+
+      <circle id="sh-genero-F-1896" href="#row-genero-F-1896"
+              cx="66.57142857142857" cy="320.0" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-1900" href="#row-genero-F-1900"
+              cx="79.71428571428571" cy="315.39772727272725" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-1904" href="#row-genero-F-1904"
+              cx="92.85714285714285" cy="316.6794773251345" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-1906" href="#row-genero-F-1906"
+              cx="106.0" cy="318.2862088863243" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-1908" href="#row-genero-F-1908"
+              cx="119.14285714285714" cy="315.90777168655273" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-1912" href="#row-genero-F-1912"
+              cx="132.28571428571428" cy="314.18564356435644" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-1920" href="#row-genero-F-1920"
+              cx="145.42857142857142" cy="311.5703634669152" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-1924" href="#row-genero-F-1924"
+              cx="158.57142857142856" cy="307.62164061127703" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-1928" href="#row-genero-F-1928"
+              cx="171.7142857142857" cy="298.83207750269105" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-1932" href="#row-genero-F-1932"
+              cx="184.85714285714283" cy="290.0" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-1936" href="#row-genero-F-1936"
+              cx="197.99999999999997" cy="299.97162545601947" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-1948" href="#row-genero-F-1948"
+              cx="211.1428571428571" cy="292.5307486631016" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-1952" href="#row-genero-F-1952"
+              cx="224.28571428571428" cy="271.4703996580466" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-1956" href="#row-genero-F-1956"
+              cx="237.42857142857142" cy="272.2023624494871" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-1960" href="#row-genero-F-1960"
+              cx="250.57142857142856" cy="269.42068218733084" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-1964" href="#row-genero-F-1964"
+              cx="263.71428571428567" cy="270.1012658227848" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-1968" href="#row-genero-F-1968"
+              cx="276.85714285714283" cy="263.4955625536788" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-1972" href="#row-genero-F-1972"
+              cx="290.0" cy="261.1188226440338" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-1976" href="#row-genero-F-1976"
+              cx="303.1428571428571" cy="253.00133307941343" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-1980" href="#row-genero-F-1980"
+              cx="316.2857142857142" cy="253.95770392749245" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-1984" href="#row-genero-F-1984"
+              cx="329.4285714285714" cy="250.4962029685882" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-1988" href="#row-genero-F-1988"
+              cx="342.57142857142856" cy="242.3078495502862" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-1992" href="#row-genero-F-1992"
+              cx="355.71428571428567" cy="234.81995978797295" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-1994" href="#row-genero-F-1994"
+              cx="368.85714285714283" cy="225.58544303797467" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-1996" href="#row-genero-F-1996"
+              cx="382.0" cy="221.87518142235123" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-1998" href="#row-genero-F-1998"
+              cx="395.1428571428571" cy="216.34396671289875" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-2000" href="#row-genero-F-2000"
+              cx="408.2857142857143" cy="213.90275667462558" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-2002" href="#row-genero-F-2002"
+              cx="421.4285714285714" cy="216.04770017035776" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-2004" href="#row-genero-F-2004"
+              cx="434.57142857142856" cy="208.60968533809418" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-2006" href="#row-genero-F-2006"
+              cx="447.71428571428567" cy="211.741214057508" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-2008" href="#row-genero-F-2008"
+              cx="460.85714285714283" cy="204.5522717247464" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-2010" href="#row-genero-F-2010"
+              cx="473.99999999999994" cy="206.71285779191277" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-2012" href="#row-genero-F-2012"
+              cx="487.1428571428571" cy="198.47910216718265" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-2014" href="#row-genero-F-2014"
+              cx="500.2857142857143" cy="208.32345123696587" r="2.5" fill="#ff6f69"/>
+      <circle id="sh-genero-F-2016" href="#row-genero-F-2016"
+              cx="513.4285714285714" cy="197.24941554646404" r="2.5" fill="#ff6f69"/>
+
+      <circle id="sh-genero-M-1896" href="#row-genero-M-1896"
+              cx="66.57142857142857" cy="50.0" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-1900" href="#row-genero-M-1900"
+              cx="79.71428571428571" cy="54.60227272727275" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-1904" href="#row-genero-M-1904"
+              cx="92.85714285714285" cy="53.320522674865515" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-1906" href="#row-genero-M-1906"
+              cx="106.0" cy="51.71379111367571" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-1908" href="#row-genero-M-1908"
+              cx="119.14285714285714" cy="54.092228313447265" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-1912" href="#row-genero-M-1912"
+              cx="132.28571428571428" cy="55.81435643564356" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-1920" href="#row-genero-M-1920"
+              cx="145.42857142857142" cy="58.42963653308482" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-1924" href="#row-genero-M-1924"
+              cx="158.57142857142856" cy="62.37835938872297" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-1928" href="#row-genero-M-1928"
+              cx="171.7142857142857" cy="71.16792249730895" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-1932" href="#row-genero-M-1932"
+              cx="184.85714285714283" cy="80.0" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-1936" href="#row-genero-M-1936"
+              cx="197.99999999999997" cy="70.02837454398053" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-1948" href="#row-genero-M-1948"
+              cx="211.1428571428571" cy="77.4692513368984" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-1952" href="#row-genero-M-1952"
+              cx="224.28571428571428" cy="98.52960034195343" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-1956" href="#row-genero-M-1956"
+              cx="237.42857142857142" cy="97.79763755051289" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-1960" href="#row-genero-M-1960"
+              cx="250.57142857142856" cy="100.57931781266919" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-1964" href="#row-genero-M-1964"
+              cx="263.71428571428567" cy="99.8987341772152" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-1968" href="#row-genero-M-1968"
+              cx="276.85714285714283" cy="106.50443744632122" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-1972" href="#row-genero-M-1972"
+              cx="290.0" cy="108.8811773559662" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-1976" href="#row-genero-M-1976"
+              cx="303.1428571428571" cy="116.99866692058654" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-1980" href="#row-genero-M-1980"
+              cx="316.2857142857142" cy="116.04229607250755" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-1984" href="#row-genero-M-1984"
+              cx="329.4285714285714" cy="119.5037970314118" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-1988" href="#row-genero-M-1988"
+              cx="342.57142857142856" cy="127.69215044971384" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-1992" href="#row-genero-M-1992"
+              cx="355.71428571428567" cy="135.18004021202705" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-1994" href="#row-genero-M-1994"
+              cx="368.85714285714283" cy="144.4145569620253" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-1996" href="#row-genero-M-1996"
+              cx="382.0" cy="148.12481857764877" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-1998" href="#row-genero-M-1998"
+              cx="395.1428571428571" cy="153.65603328710125" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-2000" href="#row-genero-M-2000"
+              cx="408.2857142857143" cy="156.09724332537442" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-2002" href="#row-genero-M-2002"
+              cx="421.4285714285714" cy="153.95229982964224" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-2004" href="#row-genero-M-2004"
+              cx="434.57142857142856" cy="161.3903146619058" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-2006" href="#row-genero-M-2006"
+              cx="447.71428571428567" cy="158.25878594249198" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-2008" href="#row-genero-M-2008"
+              cx="460.85714285714283" cy="165.44772827525364" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-2010" href="#row-genero-M-2010"
+              cx="473.99999999999994" cy="163.28714220808723" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-2012" href="#row-genero-M-2012"
+              cx="487.1428571428571" cy="171.52089783281733" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-2014" href="#row-genero-M-2014"
+              cx="500.2857142857143" cy="161.67654876303416" r="2.5" fill="#08b4ba"/>
+      <circle id="sh-genero-M-2016" href="#row-genero-M-2016"
+              cx="513.4285714285714" cy="172.75058445353594" r="2.5" fill="#08b4ba"/>
+
+    <text x="290.0" y="375" text-anchor="middle">Anio</text>
+
+    <text x="-45" y="185.0" text-anchor="middle" >Porcentaje (%)</text>
+
+    <g transform="translate(570, 35)">
+      <text x="0" y="0">Sexo</text>
+      <line x1="0" y1="20" x2="30" y2="20" stroke="#ff6f69" stroke-width="3"/>
+      <text x="38" y="24">F</text>
+      <line x1="0" y1="50" x2="30" y2="50" stroke="#08b4ba" stroke-width="3"/>
+      <text x="38" y="54">M</text>
+    </g>
+  </g>
+
+  <v:table name="lineas_genero" columns="genero,anio,cantidad,porcentaje" visualization="chart">
+
+
+          <v:row id="row-genero-F-1896" href="#sh-genero-F-1896">
+
+          F,1896,0,0.0
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-1900" href="#sh-genero-F-1900">
+
+          F,1900,33,1.7045454545454546
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-1904" href="#sh-genero-F-1904">
+
+          F,1904,16,1.2298232129131437
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-1906" href="#sh-genero-F-1906">
+
+          F,1906,11,0.634737449509521
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-1908" href="#sh-genero-F-1908">
+
+          F,1908,47,1.5156401160915833
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-1912" href="#sh-genero-F-1912">
+
+          F,1912,87,2.1534653465346536
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-1920" href="#sh-genero-F-1920">
+
+          F,1920,134,3.1220876048462256
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-1924" href="#sh-genero-F-1924">
+
+          F,1924,261,4.584577551378886
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-1928" href="#sh-genero-F-1928">
+
+          F,1928,437,7.8399712952996055
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-1932" href="#sh-genero-F-1932">
+
+          F,1932,369,11.11111111111111
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-1936" href="#sh-genero-F-1936">
+
+          F,1936,549,7.417916497770571
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-1948" href="#sh-genero-F-1948">
+
+          F,1948,761,10.17379679144385
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-1952" href="#sh-genero-F-1952">
+
+          F,1952,1682,17.973926052575337
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-1956" href="#sh-genero-F-1956">
+
+          F,1956,1139,17.702828722412185
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-1960" href="#sh-genero-F-1960">
+
+          F,1960,1730,18.73308067135896
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-1964" href="#sh-genero-F-1964">
+
+          F,1964,1752,18.481012658227847
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-1968" href="#sh-genero-F-1968">
+
+          F,1968,2193,20.927569424563412
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-1972" href="#sh-genero-F-1972">
+
+          F,1972,2608,21.807843465172674
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-1976" href="#sh-genero-F-1976">
+
+          F,1976,2606,24.814321081698726
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-1980" href="#sh-genero-F-1980">
+
+          F,1980,2186,24.460109656484278
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-1984" href="#sh-genero-F-1984">
+
+          F,1984,2983,25.74214704867104
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-1988" href="#sh-genero-F-1988">
+
+          F,1988,4223,28.774870536931044
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-1992" href="#sh-genero-F-1992">
+
+          F,1992,5178,31.548163041491502
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-1994" href="#sh-genero-F-1994">
+
+          F,1994,1105,34.96835443037975
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-1996" href="#sh-genero-F-1996">
+
+          F,1996,5008,36.34252539912917
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-1998" href="#sh-genero-F-1998">
+
+          F,1998,1384,38.391123439667126
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-2000" href="#sh-genero-F-2000">
+
+          F,2000,5431,39.29527530569423
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-2002" href="#sh-genero-F-2002">
+
+          F,2002,1582,38.500851788756385
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-2004" href="#sh-genero-F-2004">
+
+          F,2004,5546,41.255672097002154
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-2006" href="#sh-genero-F-2006">
+
+          F,2006,1757,40.09584664536741
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-2008" href="#sh-genero-F-2008">
+
+          F,2008,5816,42.75841787972357
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-2010" href="#sh-genero-F-2010">
+
+          F,2010,1847,41.95820081781009
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-2012" href="#sh-genero-F-2012">
+
+          F,2012,5815,45.0077399380805
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-2014" href="#sh-genero-F-2014">
+
+          F,2014,2023,41.361684727049685
+
+          </v:row>
+
+
+          <v:row id="row-genero-F-2016" href="#sh-genero-F-2016">
+
+          F,2016,6223,45.46317942723554
+
+          </v:row>
+
+
+
+          <v:row id="row-genero-M-1896" href="#sh-genero-M-1896">
+
+          M,1896,380,100.0
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-1900" href="#sh-genero-M-1900">
+
+          M,1900,1903,98.29545454545455
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-1904" href="#sh-genero-M-1904">
+
+          M,1904,1285,98.77017678708685
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-1906" href="#sh-genero-M-1906">
+
+          M,1906,1722,99.36526255049048
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-1908" href="#sh-genero-M-1908">
+
+          M,1908,3054,98.48435988390841
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-1912" href="#sh-genero-M-1912">
+
+          M,1912,3953,97.84653465346534
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-1920" href="#sh-genero-M-1920">
+
+          M,1920,4158,96.87791239515377
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-1924" href="#sh-genero-M-1924">
+
+          M,1924,5432,95.41542244862111
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-1928" href="#sh-genero-M-1928">
+
+          M,1928,5137,92.1600287047004
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-1932" href="#sh-genero-M-1932">
+
+          M,1932,2952,88.88888888888889
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-1936" href="#sh-genero-M-1936">
+
+          M,1936,6852,92.58208350222942
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-1948" href="#sh-genero-M-1948">
+
+          M,1948,6719,89.82620320855615
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-1952" href="#sh-genero-M-1952">
+
+          M,1952,7676,82.02607394742466
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-1956" href="#sh-genero-M-1956">
+
+          M,1956,5295,82.29717127758782
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-1960" href="#sh-genero-M-1960">
+
+          M,1960,7505,81.26691932864104
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-1964" href="#sh-genero-M-1964">
+
+          M,1964,7728,81.51898734177215
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-1968" href="#sh-genero-M-1968">
+
+          M,1968,8286,79.07243057543658
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-1972" href="#sh-genero-M-1972">
+
+          M,1972,9351,78.19215653482733
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-1976" href="#sh-genero-M-1976">
+
+          M,1976,7896,75.18567891830128
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-1980" href="#sh-genero-M-1980">
+
+          M,1980,6751,75.53989034351572
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-1984" href="#sh-genero-M-1984">
+
+          M,1984,8605,74.25785295132896
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-1988" href="#sh-genero-M-1988">
+
+          M,1988,10453,71.22512946306895
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-1992" href="#sh-genero-M-1992">
+
+          M,1992,11235,68.4518369585085
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-1994" href="#sh-genero-M-1994">
+
+          M,1994,2055,65.03164556962025
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-1996" href="#sh-genero-M-1996">
+
+          M,1996,8772,63.65747460087083
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-1998" href="#sh-genero-M-1998">
+
+          M,1998,2221,61.608876560332874
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-2000" href="#sh-genero-M-2000">
+
+          M,2000,8390,60.70472469430577
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-2002" href="#sh-genero-M-2002">
+
+          M,2002,2527,61.499148211243615
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-2004" href="#sh-genero-M-2004">
+
+          M,2004,7897,58.744327902997846
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-2006" href="#sh-genero-M-2006">
+
+          M,2006,2625,59.90415335463259
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-2008" href="#sh-genero-M-2008">
+
+          M,2008,7786,57.24158212027643
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-2010" href="#sh-genero-M-2010">
+
+          M,2010,2555,58.04179918218991
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-2012" href="#sh-genero-M-2012">
+
+          M,2012,7105,54.9922600619195
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-2014" href="#sh-genero-M-2014">
+
+          M,2014,2868,58.638315272950315
+
+          </v:row>
+
+
+          <v:row id="row-genero-M-2016" href="#sh-genero-M-2016">
+
+          M,2016,7465,54.53682057276446
+
+          </v:row>
+
+
+  </v:table>
+
+</svg>  

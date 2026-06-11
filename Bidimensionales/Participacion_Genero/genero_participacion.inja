@@ -1,0 +1,126 @@
+{# set the dimensions and margins of the graph #}
+{% set margin = obj("top", 30, "right", 200, "bottom", 70, "left", 120) %}
+{% set width = 900 - margin.left - margin.right %}
+{% set height = 470 - margin.top - margin.bottom %}
+
+{% set dataAgrupada = data | regroup("Year") | sort_by("grouper") %}
+{% set years = map(dataAgrupada,"grouper") %}
+{% set tickYears = years | slice(0, 35, 10) %}
+
+{% set xScale = scaleBand()
+    | domain(years)
+    | range(60, width - 60)
+    | padding(0.1) %}
+{% set yScale = scaleLinear()
+    | domain(0, 100)
+    | range(height - 50, 50) %}
+
+{% set femeninoDataLine = [] %}
+{% set masculinoDataLine = [] %}
+
+{% set lineShp = shapeLine() | x("x") | y("y") | curve("smooth") %}
+
+{% for yearGroup in dataAgrupada %}
+  {% set total = yearGroup.list | length %}
+  {% set femeninoCantidad = 0 %}
+  {% set masculinoCantidad = 0 %}
+  {% set sexGroups = yearGroup.list | regroup("Sex") %}
+
+  {% for sexGroup in sexGroups %}
+    {% if sexGroup.grouper == "F" %}
+      {% set femeninoCantidad = sexGroup.list | length %}
+    {% endif %}
+
+    {% if sexGroup.grouper == "M" %}
+      {% set masculinoCantidad = sexGroup.list | length %}
+    {% endif %}
+  {% endfor %}
+
+  {% set femeninoPorcentaje = (femeninoCantidad * 100) / total %}
+  {% set masculinoPorcentaje = (masculinoCantidad * 100) / total %}
+
+  {% set femeninoDataLine = femeninoDataLine
+         | append(obj("genero", "F", "anio", yearGroup.grouper, "cantidad", femeninoCantidad, "porcentaje", femeninoPorcentaje, "x", scale(xScale, yearGroup.grouper) + bandwidth(xScale)/2, "y", scale(yScale, femeninoPorcentaje))) %}
+
+  {% set masculinoDataLine = masculinoDataLine
+         | append(obj("genero", "M", "anio", yearGroup.grouper, "cantidad", masculinoCantidad, "porcentaje", masculinoPorcentaje, "x", scale(xScale, yearGroup.grouper) + bandwidth(xScale)/2, "y", scale(yScale, masculinoPorcentaje))) %}
+{% endfor %}
+
+<svg style="width:100vw; height:100vh; display:block;"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:v="https://odviz.org/1.0/"
+     viewBox="0 0 {{ width + margin.left + margin.right }} {{ height + margin.top + margin.bottom }}">
+  <style>
+    .tick-label { font-family: sans-serif; fill: #333; }
+    .axis-line, .tick-line { stroke: #ddd; }
+    .grid-line { stroke: #e6e6e6; }
+    text { font-family: sans-serif; }
+  </style>
+
+  <text x="{{ (width + margin.left + margin.right) / 2 }}"
+        y="26"
+        text-anchor="middle"
+        font-size="20">Proporcion de participacion por genero a lo largo del tiempo</text>
+
+  <g transform="translate({{margin.left}},{{margin.top}})">
+    <g transform="translate(0, {{ height - 50 }})">
+      {{ call(axisBottom(xScale) | tickValues(tickYears)) }}
+    </g>
+
+    <g transform="translate(60, 0)">
+      {{ call(axisLeft(yScale) | tickValues([0, 25, 50, 75, 100]) | grid(true)) }}
+    </g>
+
+    <path d="{{ line(lineShp, femeninoDataLine) }}"
+          stroke="#ff6f69" stroke-width="3" fill="none"/>
+    <path d="{{ line(lineShp, masculinoDataLine) }}"
+          stroke="#08b4ba" stroke-width="3" fill="none"/>
+
+    {% for punto in femeninoDataLine %}
+      <circle id="sh-genero-F-{{ punto.anio }}" href="#row-genero-F-{{ punto.anio }}"
+              cx="{{ punto.x }}" cy="{{ punto.y }}" r="2.5" fill="#ff6f69"/>
+    {% endfor %}
+
+    {% for punto in masculinoDataLine %}
+      <circle id="sh-genero-M-{{ punto.anio }}" href="#row-genero-M-{{ punto.anio }}"
+              cx="{{ punto.x }}" cy="{{ punto.y }}" r="2.5" fill="#08b4ba"/>
+    {% endfor %}
+
+    <text x="{{ width / 2 }}" y="{{ height + 5 }}" text-anchor="middle">Anio</text>
+
+    <text x="-45" y="{{ height / 2 }}" text-anchor="middle" >Porcentaje (%)</text>
+
+    <g transform="translate({{ width - 10 }}, 35)">
+      <text x="0" y="0">Sexo</text>
+      <line x1="0" y1="20" x2="30" y2="20" stroke="#ff6f69" stroke-width="3"/>
+      <text x="38" y="24">F</text>
+      <line x1="0" y1="50" x2="30" y2="50" stroke="#08b4ba" stroke-width="3"/>
+      <text x="38" y="54">M</text>
+    </g>
+  </g>
+
+  <v:table name="lineas_genero" columns="genero,anio,cantidad,porcentaje" visualization="chart">
+
+      {% for punto in femeninoDataLine %}
+
+          <v:row id="row-genero-F-{{ punto.anio }}" href="#sh-genero-F-{{ punto.anio }}">
+
+          {{ punto.genero }},{{ punto.anio }},{{ punto.cantidad }},{{ punto.porcentaje }}
+
+          </v:row>
+
+      {% endfor %}
+
+      {% for punto in masculinoDataLine %}
+
+          <v:row id="row-genero-M-{{ punto.anio }}" href="#sh-genero-M-{{ punto.anio }}">
+
+          {{ punto.genero }},{{ punto.anio }},{{ punto.cantidad }},{{ punto.porcentaje }}
+
+          </v:row>
+
+      {% endfor %}
+
+  </v:table>
+
+</svg>  
