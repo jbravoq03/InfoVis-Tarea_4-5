@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizaciones ODViz - Juegos Olímpicos</title>
+
+    <style>
+        :root {
+            --bg: #f5f7fa;
+            --card: #ffffff;
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --text: #1f2937;
+            --muted: #6b7280;
+            --shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --radius: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        header {
+            background: white;
+            box-shadow: var(--shadow);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.4rem;
+            margin-bottom: 0.75rem;
+        }
+
+        header p {
+            color: var(--muted);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 1.5rem;
+            transition: transform .2s ease,
+                        box-shadow .2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+        }
+
+        .card h2 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .card p {
+            color: var(--muted);
+            line-height: 1.5;
+            margin-bottom: 1.25rem;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1rem;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: background .2s ease;
+        }
+
+        .btn:hover {
+            background: var(--primary-hover);
+        }
+
+        footer {
+            text-align: center;
+            color: var(--muted);
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Visualizaciones Interactivas ODViz</h1>
+
+    <p>
+        Proyecto de visualización de datos basado en la especificación ODViz.
+        Cada gráfico contiene los datos originales embebidos dentro del SVG,
+        permitiendo exploración interactiva mediante zoom, desplazamiento,
+        selección y vinculación con los datos.
+    </p>
+</header>
+
+<main>
+
+    <div class="grid">
+
+        <!-- Duplicar este bloque para cada visualización -->
+
+        <article class="card">
+            <h2>Participación por deporte</h2>
+            <p>
+                Ranking de los deportes con mayor cantidad de atletas
+                participantes en los Juegos Olímpicos.
+            </p>
+            <a href="./participacion/" class="btn">
+                Abrir visualización
+            </a>
+        </article>
+
+        <article class="card">
+            <h2>Dispersión de atletas</h2>
+            <p>
+                Relación entre edad, altura, sexo, medalla obtenida y cantidad
+                de atletas agrupados.
+            </p>
+            <a href="./dispersion/" class="btn">
+                Abrir visualización
+            </a>
+        </article>
+
+        <!-- Agrega aquí las demás visualizaciones -->
+
+    </div>
+
+</main>
+
+<footer>
+    <p>
+        Proyecto de Visualización de Datos · ODViz · SVG interactivos
+    </p>
+</footer>
+
+</body>
+</html>
